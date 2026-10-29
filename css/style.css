@@ -26,7 +26,8 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.02em;
   color: var(--maroon);
   line-height: 1.25;
 }
@@ -63,10 +64,10 @@ button { font-family: inherit; cursor: pointer; border: none; }
 }
 .sec-title { font-size: clamp(1.8rem, 3.2vw, 2.5rem); margin-bottom: 0.5rem; }
 .sec-sub {
-  font-style: italic;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--forest);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  font-weight: 500;
   max-width: 680px;
   margin: 0 auto;
 }
@@ -205,7 +206,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
 .hero {
   position: relative;
   background: linear-gradient(180deg, rgba(140, 0, 61, 0.88) 0%, rgba(6, 63, 50, 0.82) 70%, rgba(26, 13, 20, 0.95) 100%),
-              url('../assets/images/hero-himalaya-bg.jpg') center/cover no-repeat;
+              url('assets/images/hero-gold-peaks.jpg') center/cover no-repeat;
   color: #fff;
   padding: 4.5rem 0 3.5rem;
   text-align: center;
@@ -231,10 +232,10 @@ button { font-family: inherit; cursor: pointer; border: none; }
 }
 .hero-title span { color: var(--gold-light); }
 .hero-sub {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   color: var(--gold-light);
-  font-style: italic;
+  font-weight: 500;
   margin-bottom: 1.75rem;
 }
 .hero-badges {
@@ -357,10 +358,9 @@ button { font-family: inherit; cursor: pointer; border: none; }
   cursor: grab;
 }
 .trophy-img {
-  max-height: 320px;
+  max-height: 380px;
   margin: 0 auto;
-  border-radius: var(--radius);
-  box-shadow: 0 0 30px rgba(217, 166, 46, 0.4);
+  filter: drop-shadow(0 0 30px rgba(217, 166, 46, 0.45));
   animation: floatAnim 4s ease-in-out infinite;
   transition: transform 0.15s ease-out;
 }

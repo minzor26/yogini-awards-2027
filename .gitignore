@@ -9,6 +9,13 @@ refine_crops.js
 test_logic.js
 test_webhook.js
 inline_css.js
+apply_design_changes.js
+fetch_candidates.js
+fetch_peaks.js
+fetch_trophies.js
+fetch_more_trophies.js
+fetch_award_tests.js
+make_transparent_trophy.js
 package.json
 package-lock.json
 server.js
