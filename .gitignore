@@ -1,0 +1,10 @@
+node_modules/
+raw_data/
+*.log
+.DS_Store
+Thumbs.db
+crop_assets.js
+download_assets.js
+refine_crops.js
+test_logic.js
+test_webhook.js
