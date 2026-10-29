@@ -8,3 +8,7 @@ download_assets.js
 refine_crops.js
 test_logic.js
 test_webhook.js
+inline_css.js
+package.json
+package-lock.json
+server.js
