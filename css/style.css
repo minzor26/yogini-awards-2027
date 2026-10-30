@@ -1118,84 +1118,7 @@ textarea.form-ctrl { min-height: 85px; }
 }
 
 
-/* Footer Associates Strip & Logos */
-.footer-associates-strip {
-  margin-top: 2.25rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid rgba(217, 166, 46, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-}
-.footer-assoc-heading {
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--gold-light);
-}
-.footer-assoc-row {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.footer-assoc-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(217, 166, 46, 0.3);
-  border-radius: 8px;
-  padding: 0.45rem 1rem;
-  transition: all 0.25s ease;
-}
-.footer-assoc-item:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: var(--gold);
-}
-.footer-assoc-logo {
-  height: 42px;
-  width: 42px;
-  object-fit: contain;
-}
-.footer-assoc-logo.ft-temi {
-  border-radius: 6px;
-}
-.footer-assoc-logo.ft-dham {
-  border-radius: 50%;
-  background: #fff;
-}
-.footer-assoc-info {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-.footer-assoc-info strong {
-  font-size: 0.86rem;
-  color: var(--white);
-  line-height: 1.25;
-}
-.footer-assoc-info span {
-  font-size: 0.72rem;
-  color: var(--gold-light);
-}
-.footer-col-associates {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.65rem;
-}
-.footer-col-assoc-label {
-  font-size: 0.74rem;
-  color: var(--gold-light);
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
+
 
 @media (max-width: 1120px) {
   .nav-links { display: none !important; }
@@ -1254,4 +1177,181 @@ textarea.form-ctrl { min-height: 85px; }
   .support-divider { display: none; }
   .associates-grid { gap: 1.25rem; }
   .associate-card { max-width: 100%; width: 100%; padding: 1.5rem 1.25rem; }
+}
+
+
+/* 4-Item Associates Section */
+.associates-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.associate-card-item {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(140, 0, 61, 0.05);
+  transition: all 0.3s ease;
+}
+.associate-card-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(217, 166, 46, 0.25);
+  border-color: var(--gold);
+}
+.assoc-logo-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.assoc-logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.assoc-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--maroon);
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+.associate-role-badge {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(140, 0, 61, 0.08);
+  color: var(--maroon);
+  border: 1px solid rgba(140, 0, 61, 0.2);
+  margin-top: auto;
+}
+.associate-role-badge.sponsor-badge {
+  background: rgba(217, 166, 46, 0.15);
+  color: #8C5B00;
+  border-color: var(--gold);
+}
+.associate-role-badge.org-badge {
+  background: var(--maroon);
+  color: var(--gold-light);
+  border-color: var(--gold);
+}
+
+/* Supporters Section */
+.supporters-section {
+  padding: 4.5rem 0;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border);
+}
+.supporters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.supporter-card {
+  background: var(--ivory);
+  border: 1px solid rgba(217, 166, 46, 0.3);
+  border-radius: var(--radius);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.25s ease;
+  min-height: 160px;
+}
+.supporter-card:hover {
+  transform: translateY(-3px);
+  background: #FFFFFF;
+  border-color: var(--gold);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+.supporter-logo-wrap {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+.supporter-logo-wrap img {
+  max-width: 85%;
+  max-height: 65px;
+  object-fit: contain;
+  filter: contrast(1.03);
+}
+.supporter-card h5 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+  margin: 0;
+}
+.supporter-sub {
+  font-size: 0.72rem;
+  color: var(--forest);
+  margin-top: 3px;
+  font-weight: 600;
+}
+
+/* Registration Mode Switcher */
+.reg-switcher-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.reg-mode-switcher {
+  display: inline-flex;
+  background: rgba(140, 0, 61, 0.08);
+  padding: 4px;
+  border-radius: 999px;
+  border: 1.5px solid var(--gold);
+  gap: 4px;
+}
+.reg-mode-btn {
+  padding: 0.75rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: var(--maroon);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+.reg-mode-btn.active {
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--burgundy) 100%);
+  color: var(--white);
+  box-shadow: 0 4px 14px rgba(140, 0, 61, 0.35);
+}
+.reg-mode-btn:hover:not(.active) {
+  background: rgba(217, 166, 46, 0.2);
+}
+
+@media (max-width: 900px) {
+  .associates-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .supporters-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+}
+
+@media (max-width: 580px) {
+  .associates-grid-4 { grid-template-columns: 1fr; }
+  .supporters-grid { grid-template-columns: 1fr; }
+  .reg-mode-switcher { flex-direction: column; width: 100%; border-radius: 12px; }
+  .reg-mode-btn { border-radius: 8px; text-align: center; width: 100%; }
 }

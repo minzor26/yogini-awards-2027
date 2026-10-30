@@ -1,6 +1,56 @@
 // 7th International Yogini Awards & Conference 2027 — App Logic
 window.YOGINI_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbyISPhB5iCN_Ec5MO25HyMiFZA6kkYzE8H_qa-wbt3u5Bqs_vAfrkPNnAdljBYGK6k/exec';
 
+// Global Mode Switcher for Registration Types
+function switchRegMode(mode) {
+  const confWrap = document.getElementById('confFormWrap');
+  const awardWrap = document.getElementById('awardFormWrap');
+  const btnConf = document.getElementById('btnModeConference');
+  const btnAward = document.getElementById('btnModeAward');
+
+  if (mode === 'conference') {
+    if (confWrap) confWrap.style.display = 'block';
+    if (awardWrap) awardWrap.style.display = 'none';
+    if (btnConf) btnConf.classList.add('active');
+    if (btnAward) btnAward.classList.remove('active');
+  } else {
+    if (confWrap) confWrap.style.display = 'none';
+    if (awardWrap) awardWrap.style.display = 'block';
+    if (btnConf) btnConf.classList.remove('active');
+    if (btnAward) btnAward.classList.add('active');
+  }
+}
+window.switchRegMode = switchRegMode;
+
+window.openConferenceTab = function() {
+  switchRegMode('conference');
+  const regSec = document.getElementById('registration');
+  if (regSec) regSec.scrollIntoView({ behavior: 'smooth' });
+};
+
+window.openAwardTab = function() {
+  switchRegMode('award');
+  const regSec = document.getElementById('registration');
+  if (regSec) regSec.scrollIntoView({ behavior: 'smooth' });
+};
+
+window.resetConferenceForm = function() {
+  const form = document.getElementById('confForm');
+  const successBox = document.getElementById('confSuccessBox');
+  const btnConfSubmit = document.getElementById('btnConfSubmit');
+  if (form) {
+    form.reset();
+    form.style.display = 'block';
+  }
+  if (btnConfSubmit) {
+    btnConfSubmit.disabled = false;
+    btnConfSubmit.textContent = 'CONFIRM CONFERENCE REGISTRATION ➔';
+  }
+  if (successBox) {
+    successBox.style.display = 'none';
+  }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // 1. Mobile Menu
@@ -86,13 +136,136 @@ document.addEventListener('DOMContentLoaded', () => {
   applyBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const cat = btn.getAttribute('data-cat');
+      switchRegMode('award');
       if (fCat && cat) fCat.value = cat;
-      const nomSection = document.getElementById('nominate');
+      const nomSection = document.getElementById('registration');
       if (nomSection) nomSection.scrollIntoView({ behavior: 'smooth' });
     });
   });
 
-  // 6. Multi-Step Form Navigation & Validation
+  // Sanitizer to prevent Formula Injection in spreadsheets
+  const sanitize = (val) => {
+    const s = String(val || '').trim();
+    return /^[=+\-@]/.test(s) ? `'${s}` : s;
+  };
+
+  // 6. CONFERENCE REGISTRATION FORM SUBMISSION
+  const confForm = document.getElementById('confForm');
+  const confSuccessBox = document.getElementById('confSuccessBox');
+
+  if (confForm) {
+    confForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('confName').value.trim();
+      const mobile = document.getElementById('confMobile').value.trim();
+      const email = document.getElementById('confEmail').value.trim();
+      const city = document.getElementById('confCity').value.trim();
+      const state = document.getElementById('confState').value.trim();
+      const inst = document.getElementById('confInst') ? document.getElementById('confInst').value.trim() : '';
+      const profession = document.getElementById('confProfession').value.trim();
+      const category = document.getElementById('confCategory').value;
+      const notes = document.getElementById('confNotes') ? document.getElementById('confNotes').value.trim() : '';
+
+      let valid = true;
+      const errName = document.getElementById('err-confName');
+      const errMobile = document.getElementById('err-confMobile');
+      const errEmail = document.getElementById('err-confEmail');
+      const errCity = document.getElementById('err-confCity');
+      const errState = document.getElementById('err-confState');
+      const errProfession = document.getElementById('err-confProfession');
+      const errCategory = document.getElementById('err-confCategory');
+
+      if (errName) errName.textContent = name ? '' : 'Please enter your full name';
+      if (errMobile) errMobile.textContent = mobile.length >= 8 ? '' : 'Please enter a valid mobile number';
+      if (errEmail) errEmail.textContent = (/^[^\s@]+@[^\s@]+\.[^\s@]+$/).test(email) ? '' : 'Please enter a valid email address';
+      if (errCity) errCity.textContent = city ? '' : 'Please enter your city';
+      if (errState) errState.textContent = state ? '' : 'Please enter your state';
+      if (errProfession) errProfession.textContent = profession ? '' : 'Please enter your profession / designation';
+      if (errCategory) errCategory.textContent = category ? '' : 'Please select your participation category';
+
+      if (!name || mobile.length < 8 || !(/^[^\s@]+@[^\s@]+\.[^\s@]+$/).test(email) || !city || !state || !profession || !category) {
+        valid = false;
+      }
+
+      if (!valid) return;
+
+      const btnConfSubmit = document.getElementById('btnConfSubmit');
+      if (btnConfSubmit) {
+        btnConfSubmit.disabled = true;
+        btnConfSubmit.textContent = 'Registering with Event Database...';
+      }
+
+      // Generate unique Conference Registration ID
+      const hex = Math.random().toString(36).substring(2, 8).toUpperCase();
+      const confId = `CONF-2027-${hex}`;
+
+      // Build payload for Google Sheets with explicit Registration Type distinction
+      const payload = {
+        registrationType: 'Conference Attendance',
+        'Registration Type': 'Conference Attendance',
+        applicationId: confId,
+        'Application ID': confId,
+        timestamp: new Date().toISOString(),
+        'Timestamp': new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+        fullName: sanitize(name),
+        'Full Name': sanitize(name),
+        mobile: sanitize(mobile),
+        'Mobile Number': sanitize(mobile),
+        email: sanitize(email),
+        'Email Address': sanitize(email),
+        city: sanitize(city),
+        'City': sanitize(city),
+        state: sanitize(state),
+        'State': sanitize(state),
+        location: sanitize(`${city}, ${state}`),
+        'Location': sanitize(`${city}, ${state}`),
+        institution: sanitize(inst),
+        'Organization / Institution': sanitize(inst),
+        profession: sanitize(profession),
+        'Profession / Designation': sanitize(profession),
+        role: sanitize(profession),
+        category: sanitize(category),
+        'Participation Category': sanitize(category),
+        additionalInfo: sanitize(notes),
+        'Additional Information': sanitize(notes),
+        reason: sanitize(`Conference Attendance: ${category}. Notes: ${notes}`)
+      };
+
+      // 1. Store in localStorage as persistent backup
+      const confSaved = JSON.parse(localStorage.getItem('yogini_conference_registrations') || '[]');
+      confSaved.push(payload);
+      localStorage.setItem('yogini_conference_registrations', JSON.stringify(confSaved));
+
+      const allSaved = JSON.parse(localStorage.getItem('yogini_all_registrations') || '[]');
+      allSaved.push(payload);
+      localStorage.setItem('yogini_all_registrations', JSON.stringify(allSaved));
+
+      // 2. Post to the unified Google Apps Script Webhook
+      if (window.YOGINI_WEBHOOK_URL) {
+        try {
+          await fetch(window.YOGINI_WEBHOOK_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+        } catch (err) {
+          console.warn('Google Sheet webhook delivery error:', err);
+        }
+      }
+
+      // Show success screen
+      confForm.style.display = 'none';
+      if (confSuccessBox) {
+        confSuccessBox.style.display = 'block';
+        const display = document.getElementById('confAppIdDisplay');
+        if (display) display.textContent = confId;
+      }
+    });
+  }
+
+  // 7. MULTI-STEP AWARD NOMINATION FORM NAVIGATION & VALIDATION
   const step1 = document.getElementById('step1');
   const step2 = document.getElementById('step2');
   const step3 = document.getElementById('step3');
@@ -200,33 +373,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const btnSubmit = document.getElementById('btnSubmit');
       btnSubmit.disabled = true;
-      btnSubmit.textContent = 'Submitting...';
+      btnSubmit.textContent = 'Submitting Nomination...';
 
       // Generate unique Application ID
       const hex = Math.random().toString(36).substring(2, 8).toUpperCase();
       const appId = `YOGINI-2027-${hex}`;
 
-      // Prevent Formula Injection
-      const sanitize = (val) => {
-        const s = String(val || '').trim();
-        return /^[=+\-@]/.test(s) ? `'${s}` : s;
-      };
-
+      // Build payload for Google Sheets with explicit Registration Type distinction
       const payload = {
+        registrationType: 'Award Registration',
+        'Registration Type': 'Award Registration',
         applicationId: appId,
+        'Application ID': appId,
         timestamp: new Date().toISOString(),
+        'Timestamp': new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
         fullName: sanitize(document.getElementById('fName').value),
+        'Full Name': sanitize(document.getElementById('fName').value),
         email: sanitize(document.getElementById('fEmail').value),
+        'Email Address': sanitize(document.getElementById('fEmail').value),
         mobile: sanitize(document.getElementById('fMobile').value),
+        'Mobile Number': sanitize(document.getElementById('fMobile').value),
         age: sanitize(document.getElementById('fAge').value),
+        'Age': sanitize(document.getElementById('fAge').value),
         location: sanitize(document.getElementById('fLocation').value),
+        'Location': sanitize(document.getElementById('fLocation').value),
         role: sanitize(document.getElementById('fRole').value),
+        'Primary Role': sanitize(document.getElementById('fRole').value),
         experience: sanitize(document.getElementById('fExp').value),
+        'Experience': sanitize(document.getElementById('fExp').value),
         institution: sanitize(document.getElementById('fInst').value),
+        'Organization / Institution': sanitize(document.getElementById('fInst').value),
         biography: sanitize(document.getElementById('fBio').value),
+        'Biography': sanitize(document.getElementById('fBio').value),
         category: sanitize(cat),
+        'Award Category': sanitize(cat),
         reason: sanitize(reason),
-        portfolio: sanitize(document.getElementById('fLink').value)
+        'Nomination Reason': sanitize(reason),
+        portfolio: sanitize(document.getElementById('fLink').value),
+        'Portfolio': sanitize(document.getElementById('fLink').value)
       };
 
       // 1. Store in localStorage as persistent backup
@@ -234,7 +418,11 @@ document.addEventListener('DOMContentLoaded', () => {
       saved.push(payload);
       localStorage.setItem('yogini_nominations', JSON.stringify(saved));
 
-      // 2. Post to Google Apps Script Webhook if configured
+      const allSaved = JSON.parse(localStorage.getItem('yogini_all_registrations') || '[]');
+      allSaved.push(payload);
+      localStorage.setItem('yogini_all_registrations', JSON.stringify(allSaved));
+
+      // 2. Post to the unified Google Apps Script Webhook
       if (window.YOGINI_WEBHOOK_URL) {
         try {
           await fetch(window.YOGINI_WEBHOOK_URL, {
@@ -244,7 +432,7 @@ document.addEventListener('DOMContentLoaded', () => {
             body: JSON.stringify(payload)
           });
         } catch (err) {
-          console.warn('Webhook delivery error:', err);
+          console.warn('Google Sheet webhook delivery error:', err);
         }
       }
 

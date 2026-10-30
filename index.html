@@ -1135,84 +1135,7 @@ textarea.form-ctrl { min-height: 85px; }
 }
 
 
-/* Footer Associates Strip & Logos */
-.footer-associates-strip {
-  margin-top: 2.25rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid rgba(217, 166, 46, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-}
-.footer-assoc-heading {
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--gold-light);
-}
-.footer-assoc-row {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.footer-assoc-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(217, 166, 46, 0.3);
-  border-radius: 8px;
-  padding: 0.45rem 1rem;
-  transition: all 0.25s ease;
-}
-.footer-assoc-item:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: var(--gold);
-}
-.footer-assoc-logo {
-  height: 42px;
-  width: 42px;
-  object-fit: contain;
-}
-.footer-assoc-logo.ft-temi {
-  border-radius: 6px;
-}
-.footer-assoc-logo.ft-dham {
-  border-radius: 50%;
-  background: #fff;
-}
-.footer-assoc-info {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-.footer-assoc-info strong {
-  font-size: 0.86rem;
-  color: var(--white);
-  line-height: 1.25;
-}
-.footer-assoc-info span {
-  font-size: 0.72rem;
-  color: var(--gold-light);
-}
-.footer-col-associates {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.65rem;
-}
-.footer-col-assoc-label {
-  font-size: 0.74rem;
-  color: var(--gold-light);
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
+
 
 @media (max-width: 1120px) {
   .nav-links { display: none !important; }
@@ -1273,6 +1196,183 @@ textarea.form-ctrl { min-height: 85px; }
   .associate-card { max-width: 100%; width: 100%; padding: 1.5rem 1.25rem; }
 }
 
+
+/* 4-Item Associates Section */
+.associates-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.associate-card-item {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(140, 0, 61, 0.05);
+  transition: all 0.3s ease;
+}
+.associate-card-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(217, 166, 46, 0.25);
+  border-color: var(--gold);
+}
+.assoc-logo-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.assoc-logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.assoc-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--maroon);
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+.associate-role-badge {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(140, 0, 61, 0.08);
+  color: var(--maroon);
+  border: 1px solid rgba(140, 0, 61, 0.2);
+  margin-top: auto;
+}
+.associate-role-badge.sponsor-badge {
+  background: rgba(217, 166, 46, 0.15);
+  color: #8C5B00;
+  border-color: var(--gold);
+}
+.associate-role-badge.org-badge {
+  background: var(--maroon);
+  color: var(--gold-light);
+  border-color: var(--gold);
+}
+
+/* Supporters Section */
+.supporters-section {
+  padding: 4.5rem 0;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border);
+}
+.supporters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.supporter-card {
+  background: var(--ivory);
+  border: 1px solid rgba(217, 166, 46, 0.3);
+  border-radius: var(--radius);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.25s ease;
+  min-height: 160px;
+}
+.supporter-card:hover {
+  transform: translateY(-3px);
+  background: #FFFFFF;
+  border-color: var(--gold);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+.supporter-logo-wrap {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+.supporter-logo-wrap img {
+  max-width: 85%;
+  max-height: 65px;
+  object-fit: contain;
+  filter: contrast(1.03);
+}
+.supporter-card h5 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+  margin: 0;
+}
+.supporter-sub {
+  font-size: 0.72rem;
+  color: var(--forest);
+  margin-top: 3px;
+  font-weight: 600;
+}
+
+/* Registration Mode Switcher */
+.reg-switcher-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.reg-mode-switcher {
+  display: inline-flex;
+  background: rgba(140, 0, 61, 0.08);
+  padding: 4px;
+  border-radius: 999px;
+  border: 1.5px solid var(--gold);
+  gap: 4px;
+}
+.reg-mode-btn {
+  padding: 0.75rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: var(--maroon);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+.reg-mode-btn.active {
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--burgundy) 100%);
+  color: var(--white);
+  box-shadow: 0 4px 14px rgba(140, 0, 61, 0.35);
+}
+.reg-mode-btn:hover:not(.active) {
+  background: rgba(217, 166, 46, 0.2);
+}
+
+@media (max-width: 900px) {
+  .associates-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .supporters-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+}
+
+@media (max-width: 580px) {
+  .associates-grid-4 { grid-template-columns: 1fr; }
+  .supporters-grid { grid-template-columns: 1fr; }
+  .reg-mode-switcher { flex-direction: column; width: 100%; border-radius: 12px; }
+  .reg-mode-btn { border-radius: 8px; text-align: center; width: 100%; }
+}
+
 </style>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -1292,10 +1392,9 @@ textarea.form-ctrl { min-height: 85px; }
     <div class="container nav-flex">
       <div class="nav-brand">
         <a href="#hero">
-          <img src="assets/images/yogini-logo.png" alt="Bharatiya Yogini Sangh Logo" class="nav-logo-yogini">
+          <img src="assets/images/yogini-logo.png" alt="Indian Yogini Association Logo" class="nav-logo-yogini">
           <div>
-            <div class="nav-title">Bharatiya Yogini Sangh</div>
-            <div class="nav-sub">In Association with ACT</div>
+            <div class="nav-title">Indian Yogini Association</div>
           </div>
         </a>
       </div>
@@ -1313,11 +1412,12 @@ textarea.form-ctrl { min-height: 85px; }
           <li><a href="#sikkim">Sikkim</a></li>
           <li><a href="#travel">Travel</a></li>
           <li><a href="#associates">Associates</a></li>
+          <li><a href="#supporters">Supporters</a></li>
         </ul>
       </nav>
 
       <div style="display:flex; align-items:center; gap:0.75rem; flex-shrink:0;">
-        <a href="#nominate" class="btn btn-gold nav-cta-btn">Register Now</a>
+        <a href="#registration" class="btn btn-gold nav-cta-btn" onclick="openConferenceTab()" style="padding: 0.45rem 1rem; font-size: 0.82rem;">Register for Conference</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">&#9776;</button>
       </div>
     </div>
@@ -1329,8 +1429,8 @@ textarea.form-ctrl { min-height: 85px; }
       <div style="display:flex; align-items:center; gap:0.65rem;">
         <img src="assets/images/yogini-logo.png" alt="Bharatiya Yogini Sangh Logo" style="width:42px; height:42px; min-width:42px; flex-shrink:0; object-fit:contain;">
         <div>
-          <div style="color:#fff; font-weight:700; font-size:0.92rem; line-height:1.2;">Bharatiya Yogini Sangh</div>
-          <div style="color:var(--gold-light); font-size:0.7rem; text-transform:uppercase;">7th International Awards</div>
+          <div style="color:#fff; font-weight:700; font-size:0.92rem; line-height:1.2;">Indian Yogini Association</div>
+          <div style="color:var(--gold-light); font-size:0.7rem; text-transform:uppercase;">7th International Awards &amp; Conference</div>
         </div>
       </div>
       <button class="menu-close" id="menuClose" aria-label="Close Menu">&times;</button>
@@ -1346,7 +1446,9 @@ textarea.form-ctrl { min-height: 85px; }
     <a href="#sikkim" class="m-link">Sikkim Tour</a>
     <a href="#travel" class="m-link">Travel Information</a>
     <a href="#associates" class="m-link">Our Associates</a>
-    <a href="#nominate" class="btn btn-gold" style="margin-top:1rem; text-align:center;">Nominate a Yogini</a>
+    <a href="#supporters" class="m-link">Our Supporters</a>
+    <a href="#registration" class="btn btn-gold m-link" onclick="openConferenceTab()" style="margin-top:1rem; text-align:center;">Register for Conference</a>
+    <a href="#registration" class="btn btn-maroon m-link" onclick="openAwardTab()" style="margin-top:0.5rem; text-align:center; border:1px solid var(--gold); color:#fff;">Nominate for Awards</a>
   </div>
 
   <!-- Hero Section -->
@@ -1365,9 +1467,10 @@ textarea.form-ctrl { min-height: 85px; }
         <div class="hero-badge">📍 <strong>Shri Krishna Pranami Mangal Dham, South Sikkim</strong></div>
       </div>
 
-      <div class="hero-actions">
-        <a href="#nominate" class="btn btn-gold">NOMINATE A YOGINI</a>
-        <a href="#categories" class="btn btn-outline">EXPLORE THE AWARDS</a>
+      <div class="hero-actions" style="display:flex; gap:0.75rem; flex-wrap:wrap; justify-content:center;">
+        <a href="#registration" class="btn btn-gold" onclick="openConferenceTab()">REGISTER FOR CONFERENCE</a>
+        <a href="#registration" class="btn btn-maroon" style="border: 1.5px solid var(--gold);" onclick="openAwardTab()">NOMINATE FOR AWARDS</a>
+        <a href="#categories" class="btn btn-outline">EXPLORE AWARDS</a>
       </div>
 
       <!-- Live Dynamic Countdown Timer -->
@@ -1455,7 +1558,7 @@ textarea.form-ctrl { min-height: 85px; }
 
       <div class="trophy-wrap">
         <div class="trophy-stage" id="trophyStage">
-          <img src="assets/images/yogini-golden-award.png" alt="7th International Yogini Awards - Prestigious Golden Memento" class="trophy-img" id="trophyImg">
+          <img src="assets/images/yogini-golden-award.png" alt="7th International Yogini Awards - Prestigious Yoga Asana Natarajasana Golden Trophy" class="trophy-img" id="trophyImg">
         </div>
         <p style="font-family: 'Alex Brush', cursive; font-size: 2.2rem; color: var(--gold-light); margin-top: 1.25rem;">
           &ldquo;Honouring Women &bull; Inspiring Change&rdquo;
@@ -1923,51 +2026,268 @@ textarea.form-ctrl { min-height: 85px; }
     </div>
   </section>
 
-  <!-- Requirement 1: Add a New Associates Section -->
+  <!-- Our Associates Section -->
   <section class="section bg-ivory associates-section" id="associates">
     <div class="container">
       <div class="sec-header" style="margin-bottom: 2.25rem;">
-        <span class="eyebrow">OUR VALUED PARTNERS</span>
+        <span class="eyebrow">ORGANISERS &amp; PARTNERS</span>
         <h2 class="sec-title">Our Associates</h2>
-        <p class="sec-sub">Proudly associated with distinguished spiritual, cultural, and regional partners of Sikkim.</p>
+        <p class="sec-sub">In sacred association and cultural collaboration for the 7th International Yogini Awards &amp; Conference 2027.</p>
       </div>
 
-      <div class="associates-grid">
-        <!-- Associate 1: Discover Temi -->
-        <div class="associate-card">
-          <div class="associate-logo-wrap">
-            <img src="assets/images/associate-discover-temi.jpg" alt="Discover Temi – The Blooming Heart of Sikkim" class="associate-logo associate-temi-logo">
+      <div class="associates-grid-4">
+        <!-- 1. Indian Yogini Association (Organiser) -->
+        <div class="associate-card-item">
+          <div class="assoc-logo-box">
+            <img src="assets/images/yogini-logo.png" alt="Indian Yogini Association Logo">
           </div>
-          <div class="associate-meta">
-            <h4>Discover Temi</h4>
-            <span class="associate-tag">The Blooming Heart of Sikkim</span>
-          </div>
+          <h4 class="assoc-title">Indian Yogini Association</h4>
+          <span class="associate-role-badge org-badge">Organiser</span>
         </div>
 
-        <!-- Associate 2: Shree Krishna Pranami Mangal Dham -->
-        <div class="associate-card">
-          <div class="associate-logo-wrap">
-            <img src="assets/images/associate-mangal-dham.png" alt="Shree Krishna Pranami Mangal Dham, Bermiok, Namphing, South Sikkim" class="associate-logo associate-dham-logo">
+        <!-- 2. ACT (Associate Partner) -->
+        <div class="associate-card-item">
+          <div class="assoc-logo-box">
+            <img src="assets/images/act-logo.png" alt="ACT Logo">
           </div>
-          <div class="associate-meta">
-            <h4>Shree Krishna Pranami Mangal Dham</h4>
-            <span class="associate-tag">Bermiok, Namphing, South Sikkim</span>
+          <h4 class="assoc-title">ACT</h4>
+          <span class="associate-role-badge">Associate Partner</span>
+        </div>
+
+        <!-- 3. Discover Temi (Associate Partner) -->
+        <div class="associate-card-item">
+          <div class="assoc-logo-box">
+            <img src="assets/images/associate-discover-temi.jpg" alt="Discover Temi – The Blooming Heart of Sikkim" style="border-radius: 8px;">
           </div>
+          <h4 class="assoc-title">Discover Temi</h4>
+          <span class="associate-role-badge">Associate Partner</span>
+        </div>
+
+        <!-- 4. Krishna Pranami Mangal Dham (Sponsor & Co-Partner) -->
+        <div class="associate-card-item">
+          <div class="assoc-logo-box">
+            <img src="assets/images/associate-mangal-dham.png" alt="Krishna Pranami Mangal Dham Logo" style="border-radius: 50%; background:#fff;">
+          </div>
+          <h4 class="assoc-title">Krishna Pranami Mangal Dham</h4>
+          <span class="associate-role-badge sponsor-badge">Sponsor &amp; Co-Partner</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Nomination Form -->
-  <section class="section bg-white" id="nominate">
+  <!-- Separate Our Supporters Section -->
+  <section class="section bg-white supporters-section" id="supporters">
+    <div class="container">
+      <div class="sec-header" style="margin-bottom: 2.5rem;">
+        <span class="eyebrow">ESTEEMED INSTITUTIONS &amp; PATRONS</span>
+        <h2 class="sec-title">Our Supporters</h2>
+        <p class="sec-sub">Proudly supported and recognized by esteemed national and international institutions, yoga federations, and wellness organizations.</p>
+      </div>
+
+      <div class="supporters-grid">
+        <!-- 1. Ministry of AYUSH -->
+        <div class="supporter-card">
+          <div class="supporter-logo-wrap">
+            <img src="assets/supporters/supporter-ayush.png" alt="Ministry of AYUSH, Government of India">
+          </div>
+          <h5>Ministry of AYUSH</h5>
+          <span class="supporter-sub">Government of India</span>
+        </div>
+
+        <!-- 2. Indian Yoga Association -->
+        <div class="supporter-card">
+          <div class="supporter-logo-wrap">
+            <img src="assets/supporters/supporter-iya.png" alt="Indian Yoga Association">
+          </div>
+          <h5>Indian Yoga Association</h5>
+          <span class="supporter-sub">Yoganushasanam</span>
+        </div>
+
+        <!-- 3. WICCI -->
+        <div class="supporter-card">
+          <div class="supporter-logo-wrap">
+            <img src="assets/supporters/supporter-wicci.png" alt="WICCI - Women's Indian Chamber of Commerce and Industry">
+          </div>
+          <h5>WICCI</h5>
+          <span class="supporter-sub">Women's Indian Chamber</span>
+        </div>
+
+        <!-- 4. ISIM -->
+        <div class="supporter-card">
+          <div class="supporter-logo-wrap">
+            <img src="assets/supporters/supporter-isim.png" alt="ISIM">
+          </div>
+          <h5>ISIM</h5>
+          <span class="supporter-sub">Academic Partner</span>
+        </div>
+
+        <!-- 5. Vindhya Shiksha Prachar Samiti Bhopal -->
+        <div class="supporter-card">
+          <div class="supporter-logo-wrap">
+            <img src="assets/supporters/supporter-vindhya.png" alt="Vindhya Shiksha Prachar Samiti Bhopal">
+          </div>
+          <h5>Vindhya Shiksha Prachar Samiti</h5>
+          <span class="supporter-sub">Bhopal</span>
+        </div>
+
+        <!-- 6. Vyasa Yoga Singapore -->
+        <div class="supporter-card">
+          <div class="supporter-logo-wrap">
+            <img src="assets/supporters/supporter-vyasa-singapore.png" alt="Vyasa Yoga Singapore">
+          </div>
+          <h5>Vyasa Yoga</h5>
+          <span class="supporter-sub">Singapore</span>
+        </div>
+
+        <!-- 7. eduGlife -->
+        <div class="supporter-card">
+          <div class="supporter-logo-wrap">
+            <img src="assets/supporters/supporter-eduglife.png" alt="eduGlife">
+          </div>
+          <h5>eduGlife</h5>
+          <span class="supporter-sub">Education &amp; Wellness</span>
+        </div>
+
+        <!-- 8. Vyasa Madhyayog -->
+        <div class="supporter-card">
+          <div class="supporter-logo-wrap">
+            <img src="assets/supporters/supporter-vyasa-madhyayog.png" alt="व्यासा मध्ययोग">
+          </div>
+          <h5>व्यासा मध्ययोग</h5>
+          <span class="supporter-sub">Yoga Education</span>
+        </div>
+
+        <!-- 9. Yoga Clinic -->
+        <div class="supporter-card">
+          <div class="supporter-logo-wrap">
+            <img src="assets/supporters/supporter-yoga-clinic.png" alt="Yoga Clinic">
+          </div>
+          <h5>Yoga Clinic</h5>
+          <span class="supporter-sub">Therapy &amp; Practice</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration & Nomination Section -->
+  <section class="section bg-white" id="registration">
+    <div id="nominate"></div>
+    <div id="register-conference"></div>
     <div class="container">
       <div class="sec-header">
-        <span class="eyebrow">REGISTRATION &amp; NOMINATION</span>
-        <h2 class="sec-title">Your Journey Deserves to Be Recognized</h2>
-        <p class="sec-sub">Submit your details for the 7th International Yogini Awards 2027.</p>
+        <span class="eyebrow">REGISTRATION &amp; NOMINATIONS</span>
+        <h2 class="sec-title">Join the 7th International Yogini Awards &amp; Conference 2027</h2>
+        <p class="sec-sub">Select your registration option below to attend the conference or nominate an inspiring yogini for awards.</p>
+      </div>
+
+      <!-- Registration Mode Switcher -->
+      <div class="reg-switcher-wrap">
+        <div class="reg-mode-switcher">
+          <button type="button" class="reg-mode-btn active" id="btnModeConference" onclick="switchRegMode('conference')">
+            🎟️ Register for Conference
+          </button>
+          <button type="button" class="reg-mode-btn" id="btnModeAward" onclick="switchRegMode('award')">
+            🏆 Nominate for Yogini Awards
+          </button>
+        </div>
       </div>
 
       <div class="form-box">
+
+        <!-- CONFERENCE ATTENDANCE FORM -->
+        <div id="confFormWrap">
+          <div style="text-align:center; margin-bottom: 2rem;">
+            <h3 style="color:var(--maroon); font-size:1.5rem; margin-bottom:0.4rem;">Conference Attendance Registration</h3>
+            <p style="color:var(--text-muted); font-size:0.92rem; max-width:620px; margin:0 auto;">
+              Open for Students, Speakers, Delegates, Yoga Professionals, Guests and Attendees. Both forms securely save records to the official event database.
+            </p>
+          </div>
+
+          <form id="confForm" novalidate>
+            <div class="form-grid">
+              <div class="form-group form-full">
+                <label>Full Name *</label>
+                <input type="text" id="confName" class="form-ctrl" placeholder="e.g. Acharya Sunita Sharma / Dr. Meera Sen" required>
+                <div class="err-msg" id="err-confName"></div>
+              </div>
+
+              <div class="form-group">
+                <label>Mobile Number (with Country Code) *</label>
+                <input type="tel" id="confMobile" class="form-ctrl" placeholder="e.g. +91 9876543210" required>
+                <div class="err-msg" id="err-confMobile"></div>
+              </div>
+
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" id="confEmail" class="form-ctrl" placeholder="e.g. sunita@example.com" required>
+                <div class="err-msg" id="err-confEmail"></div>
+              </div>
+
+              <div class="form-group">
+                <label>City *</label>
+                <input type="text" id="confCity" class="form-ctrl" placeholder="e.g. Siliguri / Gangtok / New Delhi" required>
+                <div class="err-msg" id="err-confCity"></div>
+              </div>
+
+              <div class="form-group">
+                <label>State *</label>
+                <input type="text" id="confState" class="form-ctrl" placeholder="e.g. Sikkim / West Bengal / Maharashtra" required>
+                <div class="err-msg" id="err-confState"></div>
+              </div>
+
+              <div class="form-group">
+                <label>Organization / Institution Name</label>
+                <input type="text" id="confInst" class="form-ctrl" placeholder="e.g. Yoga Shala / University / Trust">
+              </div>
+
+              <div class="form-group">
+                <label>Profession / Designation *</label>
+                <input type="text" id="confProfession" class="form-ctrl" placeholder="e.g. Yoga Teacher / Doctor / Researcher / Student" required>
+                <div class="err-msg" id="err-confProfession"></div>
+              </div>
+
+              <div class="form-group form-full">
+                <label>Participation Category *</label>
+                <select id="confCategory" class="form-ctrl" required>
+                  <option value="">-- Select Participation Category --</option>
+                  <option value="Student">Student</option>
+                  <option value="Speaker">Speaker</option>
+                  <option value="Delegate">Delegate</option>
+                  <option value="Yoga Professional">Yoga Professional</option>
+                  <option value="Guest">Guest</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div class="err-msg" id="err-confCategory"></div>
+              </div>
+
+              <div class="form-group form-full">
+                <label>Any Additional Information / Travel Notes</label>
+                <textarea id="confNotes" class="form-ctrl" rows="3" placeholder="Mention any dietary preferences, arrival details, or questions..."></textarea>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.75rem; text-align: center;">
+              <button type="submit" class="btn btn-gold" id="btnConfSubmit" style="padding: 0.95rem 2.5rem; font-size: 1rem; width:100%; max-width:360px;">
+                CONFIRM CONFERENCE REGISTRATION ➔
+              </button>
+            </div>
+          </form>
+
+          <!-- Conference Success Box -->
+          <div class="success-box" id="confSuccessBox" style="display:none; text-align:center; padding:3rem 1.5rem;">
+            <div style="font-size:3.5rem; margin-bottom:1rem;">🎉</div>
+            <h3 style="color:var(--maroon); margin-bottom:0.5rem; font-size:1.8rem;">Conference Registration Confirmed!</h3>
+            <p style="color:var(--forest); font-weight:700; margin-bottom:0.75rem;">Registration Type: Conference Attendance</p>
+            <div class="app-id-pill" id="confAppIdDisplay" style="display:inline-block; margin-bottom:1.25rem;">CONF-2027-XXXXXX</div>
+            <p style="max-width:540px; margin:0 auto 1.5rem; font-size:0.92rem; color:var(--text-muted); line-height:1.6;">
+              Thank you for registering for the <strong>7th International Yogini Conference 2027</strong> in South Sikkim. Your registration details have been successfully recorded in the official event registry. Our team will contact you with your delegate information.
+            </p>
+            <button class="btn btn-gold" onclick="resetConferenceForm()">Submit Another Registration</button>
+          </div>
+        </div>
+
+        <!-- AWARD NOMINATION FORM WRAPPER -->
+        <div id="awardFormWrap" style="display:none;">
         <div class="step-nav">
           <div class="step-tab active" id="tabS1">1. Personal Info</div>
           <div class="step-tab" id="tabS2">2. Yogic Background</div>
@@ -2098,6 +2418,7 @@ textarea.form-ctrl { min-height: 85px; }
           </p>
           <button class="btn btn-gold" onclick="location.reload()">Submit Another Nomination</button>
         </div>
+        </div> <!-- End awardFormWrap -->
       </div>
     </div>
   </section>
@@ -2121,13 +2442,7 @@ textarea.form-ctrl { min-height: 85px; }
             <img src="assets/images/yogini-logo.png" alt="Yogini Logo" style="height:36px; background:#fff; padding:2px; border-radius:4px;" title="Bharatiya Yogini Sangh">
             <img src="assets/images/act-logo.png" alt="ACT Logo" style="height:36px; background:#fff; padding:2px; border-radius:4px;" title="ACT">
           </div>
-          <div class="footer-col-associates">
-            <span class="footer-col-assoc-label">Associates:</span>
-            <div style="display:flex; gap:0.45rem; align-items:center;">
-              <img src="assets/images/associate-discover-temi.jpg" alt="Discover Temi" style="height:32px; width:32px; border-radius:4px; object-fit:contain;" title="Discover Temi – The Blooming Heart of Sikkim">
-              <img src="assets/images/associate-mangal-dham.png" alt="Shree Krishna Pranami Mangal Dham" style="height:32px; width:32px; border-radius:50%; background:#fff; object-fit:contain;" title="Shree Krishna Pranami Mangal Dham">
-            </div>
-          </div>
+          
         </div>
 
         <div>
@@ -2141,6 +2456,7 @@ textarea.form-ctrl { min-height: 85px; }
             <li><a href="#sikkim">Sikkim Tour</a></li>
             <li><a href="#travel">Travel Advisory</a></li>
             <li><a href="#associates">Our Associates</a></li>
+            <li><a href="#supporters">Our Supporters</a></li>
           </ul>
         </div>
 
@@ -2183,26 +2499,7 @@ textarea.form-ctrl { min-height: 85px; }
         </div>
       </div>
 
-      <!-- Footer Associates Showcase Strip -->
-      <div class="footer-associates-strip">
-        <div class="footer-assoc-heading">Our Associates</div>
-        <div class="footer-assoc-row">
-          <div class="footer-assoc-item">
-            <img src="assets/images/associate-discover-temi.jpg" alt="Discover Temi – The Blooming Heart of Sikkim" class="footer-assoc-logo ft-temi">
-            <div class="footer-assoc-info">
-              <strong>Discover Temi</strong>
-              <span>The Blooming Heart of Sikkim</span>
-            </div>
-          </div>
-          <div class="footer-assoc-item">
-            <img src="assets/images/associate-mangal-dham.png" alt="Shree Krishna Pranami Mangal Dham" class="footer-assoc-logo ft-dham">
-            <div class="footer-assoc-info">
-              <strong>Shree Krishna Pranami Mangal Dham</strong>
-              <span>Bermiok, Namphing, South Sikkim</span>
-            </div>
-          </div>
-        </div>
-      </div>
+
 
       <div class="footer-bottom">
         &copy; 2027 Bharatiya Yogini Sangh &amp; ACT. All rights reserved. &bull; शान्तिमूलं जगत्सर्वम्
