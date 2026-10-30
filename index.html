@@ -148,10 +148,15 @@ button { font-family: inherit; cursor: pointer; border: none; }
   padding: 0.65rem 0;
   transition: all 0.3s ease;
 }
+.navbar .container {
+  max-width: 1360px;
+  width: 95%;
+}
 .nav-flex {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 .nav-brand {
   display: flex;
@@ -187,14 +192,23 @@ button { font-family: inherit; cursor: pointer; border: none; }
 
 .nav-links {
   display: flex;
-  gap: 1.25rem;
+  align-items: center;
+  gap: 0.65rem;
   list-style: none;
+  white-space: nowrap !important;
+  margin: 0;
+  padding: 0;
 }
 .nav-links a {
   color: var(--ivory);
-  font-size: 0.88rem;
-  font-weight: 500;
-  transition: color 0.2s;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.35rem 0.45rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap !important;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
 }
 .nav-links a:hover { color: var(--gold-light); }
 
@@ -908,15 +922,15 @@ textarea.form-ctrl { min-height: 85px; }
   background: var(--ivory);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1rem 1.5rem;
+  padding: 1.1rem 1.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 .support-title {
-  font-size: 0.92rem;
+  font-size: 0.94rem;
   font-weight: 700;
   color: var(--maroon);
 }
@@ -929,21 +943,28 @@ textarea.form-ctrl { min-height: 85px; }
 .support-item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.88rem;
+  gap: 0.6rem;
+  font-size: 0.92rem;
 }
-.support-label {
-  color: var(--text-muted);
-  font-weight: 600;
+.support-phone-icon {
+  font-size: 1.05rem;
+  line-height: 1;
 }
 .support-link {
   font-weight: 700;
   color: var(--dark);
+  text-decoration: none;
+  font-size: 0.96rem;
+  letter-spacing: 0.02em;
+}
+.support-link:hover {
+  color: var(--maroon);
+  text-decoration: underline;
 }
 .support-btns {
   display: inline-flex;
   gap: 0.35rem;
-  margin-left: 0.25rem;
+  margin-left: 0.2rem;
 }
 .pill-btn {
   font-size: 0.72rem;
@@ -969,7 +990,7 @@ textarea.form-ctrl { min-height: 85px; }
 }
 .support-divider {
   width: 1px;
-  height: 20px;
+  height: 22px;
   background: var(--border);
 }
 
@@ -1113,6 +1134,91 @@ textarea.form-ctrl { min-height: 85px; }
   background: #1EBE5D;
 }
 
+
+/* Footer Associates Strip & Logos */
+.footer-associates-strip {
+  margin-top: 2.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(217, 166, 46, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+.footer-assoc-heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold-light);
+}
+.footer-assoc-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer-assoc-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(217, 166, 46, 0.3);
+  border-radius: 8px;
+  padding: 0.45rem 1rem;
+  transition: all 0.25s ease;
+}
+.footer-assoc-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--gold);
+}
+.footer-assoc-logo {
+  height: 42px;
+  width: 42px;
+  object-fit: contain;
+}
+.footer-assoc-logo.ft-temi {
+  border-radius: 6px;
+}
+.footer-assoc-logo.ft-dham {
+  border-radius: 50%;
+  background: #fff;
+}
+.footer-assoc-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.footer-assoc-info strong {
+  font-size: 0.86rem;
+  color: var(--white);
+  line-height: 1.25;
+}
+.footer-assoc-info span {
+  font-size: 0.72rem;
+  color: var(--gold-light);
+}
+.footer-col-associates {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.65rem;
+}
+.footer-col-assoc-label {
+  font-size: 0.74rem;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 1120px) {
+  .nav-links { display: none !important; }
+  .menu-toggle { display: block !important; }
+}
+
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .menu-toggle { display: block; }
@@ -1205,7 +1311,7 @@ textarea.form-ctrl { min-height: 85px; }
           <li><a href="#guests">Guests</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#sikkim">Sikkim</a></li>
-          <li><a href="#travel">Travel Info</a></li>
+          <li><a href="#travel">Travel</a></li>
           <li><a href="#associates">Associates</a></li>
         </ul>
       </nav>
@@ -1790,12 +1896,12 @@ textarea.form-ctrl { min-height: 85px; }
         </div>
       </div>
 
-      <!-- Secretariat Assistance Helpline -->
+      <!-- Travel Support Helpline Bar -->
       <div class="travel-support-bar">
         <div class="support-title">Need Assistance with Travel Logistics or Transfers?</div>
         <div class="support-contacts">
           <div class="support-item">
-            <span class="support-label">Secretariat:</span>
+            <span class="support-phone-icon">📞</span>
             <a href="tel:9425126644" class="support-link">9425126644</a>
             <div class="support-btns">
               <a href="tel:9425126644" class="pill-btn pill-call">Call</a>
@@ -1804,7 +1910,7 @@ textarea.form-ctrl { min-height: 85px; }
           </div>
           <div class="support-divider"></div>
           <div class="support-item">
-            <span class="support-label">Coordination:</span>
+            <span class="support-phone-icon">📞</span>
             <a href="tel:+919832158885" class="support-link">+91 98321 58885</a>
             <div class="support-btns">
               <a href="tel:+919832158885" class="pill-btn pill-call">Call</a>
@@ -2008,12 +2114,19 @@ textarea.form-ctrl { min-height: 85px; }
       <div class="footer-grid">
         <div>
           <h4>Bharatiya Yogini Sangh</h4>
-          <p style="font-size:0.84rem; opacity:0.8; margin-bottom:1rem;">
+          <p style="font-size:0.84rem; opacity:0.8; margin-bottom:0.85rem;">
             In Association with ACT (Aspire &bull; Connect &bull; Transform). Celebrating the wisdom, research, and leadership of women in Yoga &amp; Wellness.
           </p>
-          <div style="display:flex; gap:0.5rem; align-items:center;">
-            <img src="assets/images/yogini-logo.png" alt="Logo" style="height:36px; background:#fff; padding:2px; border-radius:4px;">
-            
+          <div style="display:flex; gap:0.6rem; align-items:center; flex-wrap:wrap; margin-bottom:0.85rem;">
+            <img src="assets/images/yogini-logo.png" alt="Yogini Logo" style="height:36px; background:#fff; padding:2px; border-radius:4px;" title="Bharatiya Yogini Sangh">
+            <img src="assets/images/act-logo.png" alt="ACT Logo" style="height:36px; background:#fff; padding:2px; border-radius:4px;" title="ACT">
+          </div>
+          <div class="footer-col-associates">
+            <span class="footer-col-assoc-label">Associates:</span>
+            <div style="display:flex; gap:0.45rem; align-items:center;">
+              <img src="assets/images/associate-discover-temi.jpg" alt="Discover Temi" style="height:32px; width:32px; border-radius:4px; object-fit:contain;" title="Discover Temi – The Blooming Heart of Sikkim">
+              <img src="assets/images/associate-mangal-dham.png" alt="Shree Krishna Pranami Mangal Dham" style="height:32px; width:32px; border-radius:50%; background:#fff; object-fit:contain;" title="Shree Krishna Pranami Mangal Dham">
+            </div>
           </div>
         </div>
 
@@ -2043,7 +2156,7 @@ textarea.form-ctrl { min-height: 85px; }
         </div>
 
         <div class="footer-contact">
-          <h4>Contact Secretariat</h4>
+          <h4>Contact Details</h4>
           <ul class="contact-list">
             <li>📍 Bermiok Namphing, South Sikkim</li>
             <li class="contact-item">
@@ -2067,6 +2180,27 @@ textarea.form-ctrl { min-height: 85px; }
             <li>✉️ <a href="mailto:latayogini68@gmail.com">latayogini68@gmail.com</a></li>
             <li>🌐 <a href="https://yoginiindia.com/" target="_blank" rel="noopener noreferrer">yoginiindia.com</a></li>
           </ul>
+        </div>
+      </div>
+
+      <!-- Footer Associates Showcase Strip -->
+      <div class="footer-associates-strip">
+        <div class="footer-assoc-heading">Our Associates</div>
+        <div class="footer-assoc-row">
+          <div class="footer-assoc-item">
+            <img src="assets/images/associate-discover-temi.jpg" alt="Discover Temi – The Blooming Heart of Sikkim" class="footer-assoc-logo ft-temi">
+            <div class="footer-assoc-info">
+              <strong>Discover Temi</strong>
+              <span>The Blooming Heart of Sikkim</span>
+            </div>
+          </div>
+          <div class="footer-assoc-item">
+            <img src="assets/images/associate-mangal-dham.png" alt="Shree Krishna Pranami Mangal Dham" class="footer-assoc-logo ft-dham">
+            <div class="footer-assoc-info">
+              <strong>Shree Krishna Pranami Mangal Dham</strong>
+              <span>Bermiok, Namphing, South Sikkim</span>
+            </div>
+          </div>
         </div>
       </div>
 
