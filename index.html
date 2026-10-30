@@ -917,6 +917,117 @@ textarea.form-ctrl { min-height: 85px; }
   font-style: italic;
 }
 
+/* Accommodation, Sightseeing & Transit Charges Policy */
+.travel-policy-box {
+  background: #FFFFFF;
+  border: 1.5px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.75rem;
+  box-shadow: 0 4px 22px rgba(140, 0, 61, 0.06);
+}
+.travel-policy-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(217, 166, 46, 0.25);
+}
+.travel-policy-badge {
+  background: var(--maroon);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 0.35rem;
+}
+.travel-policy-title {
+  font-size: 1.25rem;
+  color: var(--maroon);
+  font-weight: 800;
+  margin: 0;
+}
+.travel-policy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.policy-card {
+  background: #FAF7F2;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.policy-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+.policy-card.policy-free-card {
+  border-color: #81C784;
+  background: #F4FBF4;
+}
+.policy-card.policy-charge-card {
+  border-color: #FFB74D;
+  background: #FFFBF5;
+}
+.policy-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.policy-icon {
+  font-size: 1.85rem;
+}
+.policy-badge-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.pill-free {
+  background: #E8F5E9;
+  color: #2E7D32;
+  border: 1px solid #A5D6A7;
+}
+.pill-charge {
+  background: #FFF3E0;
+  color: #C62828;
+  border: 1px solid #FFCC80;
+}
+.policy-card h5 {
+  font-size: 1.05rem;
+  color: var(--maroon);
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+.policy-highlight-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+.free-tag {
+  color: #2E7D32;
+}
+.charge-tag {
+  color: #C62828;
+}
+.policy-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
 /* Travel Support Helpline Bar */
 .travel-support-bar {
   background: var(--ivory);
@@ -1364,6 +1475,8 @@ textarea.form-ctrl { min-height: 85px; }
 @media (max-width: 900px) {
   .associates-grid-4 { grid-template-columns: repeat(2, 1fr); }
   .supporters-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .travel-policy-grid { grid-template-columns: 1fr; }
+  .travel-policy-box { padding: 1.25rem; }
 }
 
 @media (max-width: 580px) {
@@ -1770,12 +1883,6 @@ textarea.form-ctrl { min-height: 85px; }
           <div class="note">Government of India (Invited Dignitary)</div>
         </div>
         <div class="dignitary-card">
-          <div class="crest">VR</div>
-          <h4>Smt. Vijay Rahatkar</h4>
-          <div class="desig">Chairperson, National Commission for Women (NCW)</div>
-          <div class="note">Patron of Women Empowerment (Invited Dignitary)</div>
-        </div>
-        <div class="dignitary-card">
           <div class="crest">ST</div>
           <h4>Smt. Savitri Thakur</h4>
           <div class="desig">Minister of State, Women &amp; Child Development</div>
@@ -1796,8 +1903,7 @@ textarea.form-ctrl { min-height: 85px; }
         <div class="dignitary-card">
           <div class="crest">RV</div>
           <h4>Raj Vasu</h4>
-          <div class="desig">Film Producer &amp; Cultural Luminary</div>
-          <div class="note">Cultural Patron (Invited Dignitary)</div>
+          <div class="desig">Social Activist</div>
         </div>
         <div class="dignitary-card">
           <div class="crest">IN</div>
@@ -1915,6 +2021,11 @@ textarea.form-ctrl { min-height: 85px; }
           </div>
         </div>
       </div>
+
+      <!-- Sightseeing Charges Policy Notice -->
+      <div style="margin-top: 1.75rem; text-align: center; font-size: 0.9rem; color: var(--text); background: var(--white); border: 1.5px dashed var(--gold); border-radius: 10px; padding: 0.9rem 1.5rem; max-width: 820px; margin-left: auto; margin-right: auto; box-shadow: 0 4px 14px rgba(0,0,0,0.04);">
+        <span style="color:var(--maroon); font-weight:700;">📌 Sightseeing Advisory:</span> Gangtok and South Sikkim sightseeing tours on <strong>31 January</strong> are organized for cultural exploration and are <strong>chargeable for all participants</strong> (including selected Yoginis).
+      </div>
     </div>
   </section>
 
@@ -1968,6 +2079,56 @@ textarea.form-ctrl { min-height: 85px; }
           <div class="travel-transit-box">
             <div class="transit-label">⏱️ Morning Venue Departure</div>
             <p>All delegates depart the venue in the morning for Siliguri (approx. 4 hours mountain transit).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Important Notice: Accommodation, Sightseeing & Transit Charges Policy -->
+      <div class="travel-policy-box">
+        <div class="travel-policy-header">
+          <div class="travel-policy-title-wrap">
+            <span class="travel-policy-badge">IMPORTANT POLICY ADVISORY</span>
+            <h4 class="travel-policy-title">Stay &amp; Accommodation, Sightseeing &amp; Transit Charges Notice</h4>
+          </div>
+        </div>
+        <div class="travel-policy-grid">
+          <!-- 1. Accommodation -->
+          <div class="policy-card policy-free-card">
+            <div class="policy-card-top">
+              <span class="policy-icon">🏨</span>
+              <span class="policy-badge-pill pill-free">Free (Selected Yoginis Only)</span>
+            </div>
+            <h5>Stay &amp; Accommodation</h5>
+            <div class="policy-highlight-tag free-tag">✓ Complimentary for Selected Yoginis</div>
+            <p>
+              Stay and accommodation at the venue will be <strong>free of cost exclusively for selected Yoginis (Awardees)</strong>. For all other delegates, participants, and accompanying guests, accommodation is arranged separately or on a standard self-paid basis.
+            </p>
+          </div>
+
+          <!-- 2. Sightseeing -->
+          <div class="policy-card policy-charge-card">
+            <div class="policy-card-top">
+              <span class="policy-icon">🏔️</span>
+              <span class="policy-badge-pill pill-charge">Chargeable For Everyone</span>
+            </div>
+            <h5>Sightseeing Tours (Gangtok &amp; Sikkim)</h5>
+            <div class="policy-highlight-tag charge-tag">⚠ Chargeable for All Delegates &amp; Yoginis</div>
+            <p>
+              Sightseeing excursions, including the Gangtok tour scheduled for <strong>31 January</strong> and regional sightseeing, are <strong>chargeable for everyone</strong> (including selected Yoginis and all delegates).
+            </p>
+          </div>
+
+          <!-- 3. Pickup & Drop -->
+          <div class="policy-card policy-charge-card">
+            <div class="policy-card-top">
+              <span class="policy-icon">🚐</span>
+              <span class="policy-badge-pill pill-charge">Chargeable For Everyone</span>
+            </div>
+            <h5>Siliguri &harr; Venue Pickup &amp; Drop</h5>
+            <div class="policy-highlight-tag charge-tag">⚠ Chargeable for All Delegates &amp; Yoginis</div>
+            <p>
+              Vehicle transfer and pickup &amp; drop service between Siliguri and the event venue is <strong>chargeable for everyone</strong>. All delegates are requested to coordinate their transfer schedules in advance.
+            </p>
           </div>
         </div>
       </div>
@@ -2091,7 +2252,6 @@ textarea.form-ctrl { min-height: 85px; }
             <img src="assets/supporters/supporter-ayush.png" alt="Ministry of AYUSH, Government of India">
           </div>
           <h5>Ministry of AYUSH</h5>
-          <span class="supporter-sub">Government of India</span>
         </div>
 
         <!-- 2. Indian Yoga Association -->
@@ -2100,7 +2260,6 @@ textarea.form-ctrl { min-height: 85px; }
             <img src="assets/supporters/supporter-iya.png" alt="Indian Yoga Association">
           </div>
           <h5>Indian Yoga Association</h5>
-          <span class="supporter-sub">Yoganushasanam</span>
         </div>
 
         <!-- 3. WICCI -->
@@ -2109,7 +2268,6 @@ textarea.form-ctrl { min-height: 85px; }
             <img src="assets/supporters/supporter-wicci.png" alt="WICCI - Women's Indian Chamber of Commerce and Industry">
           </div>
           <h5>WICCI</h5>
-          <span class="supporter-sub">Women's Indian Chamber</span>
         </div>
 
         <!-- 4. ISIM -->
@@ -2118,7 +2276,6 @@ textarea.form-ctrl { min-height: 85px; }
             <img src="assets/supporters/supporter-isim.png" alt="ISIM">
           </div>
           <h5>ISIM</h5>
-          <span class="supporter-sub">Academic Partner</span>
         </div>
 
         <!-- 5. Vindhya Shiksha Prachar Samiti Bhopal -->
@@ -2127,7 +2284,6 @@ textarea.form-ctrl { min-height: 85px; }
             <img src="assets/supporters/supporter-vindhya.png" alt="Vindhya Shiksha Prachar Samiti Bhopal">
           </div>
           <h5>Vindhya Shiksha Prachar Samiti</h5>
-          <span class="supporter-sub">Bhopal</span>
         </div>
 
         <!-- 6. Vyasa Yoga Singapore -->
@@ -2136,7 +2292,6 @@ textarea.form-ctrl { min-height: 85px; }
             <img src="assets/supporters/supporter-vyasa-singapore.png" alt="Vyasa Yoga Singapore">
           </div>
           <h5>Vyasa Yoga</h5>
-          <span class="supporter-sub">Singapore</span>
         </div>
 
         <!-- 7. eduGlife -->
@@ -2145,7 +2300,6 @@ textarea.form-ctrl { min-height: 85px; }
             <img src="assets/supporters/supporter-eduglife.png" alt="eduGlife">
           </div>
           <h5>eduGlife</h5>
-          <span class="supporter-sub">Education &amp; Wellness</span>
         </div>
 
         <!-- 8. Vyasa Madhyayog -->
@@ -2154,7 +2308,6 @@ textarea.form-ctrl { min-height: 85px; }
             <img src="assets/supporters/supporter-vyasa-madhyayog.png" alt="व्यासा मध्ययोग">
           </div>
           <h5>व्यासा मध्ययोग</h5>
-          <span class="supporter-sub">Yoga Education</span>
         </div>
 
         <!-- 9. Yoga Clinic -->
@@ -2163,7 +2316,6 @@ textarea.form-ctrl { min-height: 85px; }
             <img src="assets/supporters/supporter-yoga-clinic.png" alt="Yoga Clinic">
           </div>
           <h5>Yoga Clinic</h5>
-          <span class="supporter-sub">Therapy &amp; Practice</span>
         </div>
       </div>
     </div>
@@ -2434,15 +2586,13 @@ textarea.form-ctrl { min-height: 85px; }
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h4>Bharatiya Yogini Sangh</h4>
+          <h4>Indian Yogini Association</h4>
           <p style="font-size:0.84rem; opacity:0.8; margin-bottom:0.85rem;">
-            In Association with ACT (Aspire &bull; Connect &bull; Transform). Celebrating the wisdom, research, and leadership of women in Yoga &amp; Wellness.
+            Celebrating the wisdom, research, and leadership of women in Yoga &amp; Wellness. 7th International Yogini Awards &amp; Conference 2027, South Sikkim.
           </p>
           <div style="display:flex; gap:0.6rem; align-items:center; flex-wrap:wrap; margin-bottom:0.85rem;">
-            <img src="assets/images/yogini-logo.png" alt="Yogini Logo" style="height:36px; background:#fff; padding:2px; border-radius:4px;" title="Bharatiya Yogini Sangh">
-            <img src="assets/images/act-logo.png" alt="ACT Logo" style="height:36px; background:#fff; padding:2px; border-radius:4px;" title="ACT">
+            <img src="assets/images/yogini-logo.png" alt="Indian Yogini Association" style="height:40px; background:#fff; padding:3px; border-radius:6px;" title="Indian Yogini Association">
           </div>
-          
         </div>
 
         <div>

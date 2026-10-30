@@ -900,6 +900,117 @@ textarea.form-ctrl { min-height: 85px; }
   font-style: italic;
 }
 
+/* Accommodation, Sightseeing & Transit Charges Policy */
+.travel-policy-box {
+  background: #FFFFFF;
+  border: 1.5px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.75rem;
+  box-shadow: 0 4px 22px rgba(140, 0, 61, 0.06);
+}
+.travel-policy-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(217, 166, 46, 0.25);
+}
+.travel-policy-badge {
+  background: var(--maroon);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 0.35rem;
+}
+.travel-policy-title {
+  font-size: 1.25rem;
+  color: var(--maroon);
+  font-weight: 800;
+  margin: 0;
+}
+.travel-policy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.policy-card {
+  background: #FAF7F2;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.policy-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+.policy-card.policy-free-card {
+  border-color: #81C784;
+  background: #F4FBF4;
+}
+.policy-card.policy-charge-card {
+  border-color: #FFB74D;
+  background: #FFFBF5;
+}
+.policy-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.policy-icon {
+  font-size: 1.85rem;
+}
+.policy-badge-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.pill-free {
+  background: #E8F5E9;
+  color: #2E7D32;
+  border: 1px solid #A5D6A7;
+}
+.pill-charge {
+  background: #FFF3E0;
+  color: #C62828;
+  border: 1px solid #FFCC80;
+}
+.policy-card h5 {
+  font-size: 1.05rem;
+  color: var(--maroon);
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+.policy-highlight-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+.free-tag {
+  color: #2E7D32;
+}
+.charge-tag {
+  color: #C62828;
+}
+.policy-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
 /* Travel Support Helpline Bar */
 .travel-support-bar {
   background: var(--ivory);
@@ -1347,6 +1458,8 @@ textarea.form-ctrl { min-height: 85px; }
 @media (max-width: 900px) {
   .associates-grid-4 { grid-template-columns: repeat(2, 1fr); }
   .supporters-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .travel-policy-grid { grid-template-columns: 1fr; }
+  .travel-policy-box { padding: 1.25rem; }
 }
 
 @media (max-width: 580px) {
