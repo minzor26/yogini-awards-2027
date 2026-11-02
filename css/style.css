@@ -1468,3 +1468,23 @@ textarea.form-ctrl { min-height: 85px; }
   .reg-mode-switcher { flex-direction: column; width: 100%; border-radius: 12px; }
   .reg-mode-btn { border-radius: 8px; text-align: center; width: 100%; }
 }
+
+
+/* Simple & Readable Parallel Sessions */
+.parallel-panels-simple {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.research-badges-simple {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+@media (max-width: 768px) {
+  .parallel-panels-simple, .research-badges-simple {
+    grid-template-columns: 1fr;
+  }
+}

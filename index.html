@@ -1486,6 +1486,26 @@ textarea.form-ctrl { min-height: 85px; }
   .reg-mode-btn { border-radius: 8px; text-align: center; width: 100%; }
 }
 
+
+/* Simple & Readable Parallel Sessions */
+.parallel-panels-simple {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.research-badges-simple {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+@media (max-width: 768px) {
+  .parallel-panels-simple, .research-badges-simple {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -1494,7 +1514,7 @@ textarea.form-ctrl { min-height: 85px; }
   <!-- Top Strip -->
   <div class="top-strip">
     <div class="container top-strip-flex">
-      <div>📍 Shri Krishna Pranami Mangal Dham, Bermiok Namphing, South Sikkim &bull; 📅 30–31 January 2027</div>
+      <div>📍 Shri Krishna Pranami Mangal Dham, Bermiok Namphing, South Sikkim &bull; 📅 29 January – 1 February 2027</div>
       <div>शक्तिमूलं जगत्सर्वम् &bull; Universal Peace is the Root of All Life</div>
     </div>
   </div>
@@ -1576,7 +1596,7 @@ textarea.form-ctrl { min-height: 85px; }
       </p>
 
       <div class="hero-badges">
-        <div class="hero-badge">📅 <strong>30–31 January 2027</strong></div>
+        <div class="hero-badge">📅 <strong>29–31 January 2027</strong></div>
         <div class="hero-badge">📍 <strong>Shri Krishna Pranami Mangal Dham, South Sikkim</strong></div>
       </div>
 
@@ -1588,7 +1608,7 @@ textarea.form-ctrl { min-height: 85px; }
 
       <!-- Live Dynamic Countdown Timer -->
       <div class="countdown-box">
-        <div class="countdown-title">Countdown to 30 January 2027 (IST)</div>
+        <div class="countdown-title">Countdown to 29 January 2027 (IST)</div>
         <div class="countdown-grid">
           <div class="count-card">
             <div class="count-num" id="cDays">00</div>
@@ -1818,7 +1838,7 @@ textarea.form-ctrl { min-height: 85px; }
       <div class="sec-header">
         <span class="eyebrow">PROGRAMME &amp; VENUE</span>
         <h2 class="sec-title">Event Schedule &amp; Sanctuary</h2>
-        <p class="sec-sub">30–31 January 2027 &bull; Shri Krishna Pranami Mangal Dham, South Sikkim</p>
+        <p class="sec-sub">29 January – 1 February 2027 &bull; Shri Krishna Pranami Mangal Dham, South Sikkim</p>
       </div>
 
       <!-- Venue Spotlight -->
@@ -1838,31 +1858,183 @@ textarea.form-ctrl { min-height: 85px; }
 
       <!-- Schedule Tabs -->
       <div class="tab-nav">
-        <button class="tab-btn active" id="tabDay1">Day 1 &bull; 30 January 2027</button>
-        <button class="tab-btn" id="tabDay2">Day 2 &bull; 31 January 2027</button>
+        <button class="tab-btn active" id="tabDay1">Day 1 &bull; 29 Jan (Arrival)</button>
+        <button class="tab-btn" id="tabDay2">Day 2 &bull; 30 Jan (Conference &amp; Awards)</button>
+        <button class="tab-btn" id="tabDay3">Day 3 &bull; 31 Jan (Sightseeing)</button>
+        <button class="tab-btn" id="tabDay4">Day 4 &bull; 1 Feb (Departure)</button>
       </div>
 
+      <!-- DAY 1: 29 JANUARY 2027 -->
       <div class="timeline" id="schedDay1">
-        <div class="time-slot"><strong>09:00 – 10:00 AM</strong><p>Registration and Welcome Tea with traditional Sikkimese hospitality.</p></div>
-        <div class="time-slot"><strong>10:00 – 11:00 AM</strong><p>Inaugural Ceremony, Lamp Lighting, Welcome Address &amp; Dignitaries Introduction.</p></div>
-        <div class="time-slot"><strong>11:00 – 11:40 AM</strong><p>Keynote Addresses by Eminent Guests and Wellness Experts.</p></div>
-        <div class="time-slot"><strong>11:40 AM – 12:40 PM</strong><p>Panel Discussions I &amp; II: Yoga &amp; Preventive Health &bull; Women&rsquo;s Leadership.</p></div>
-        <div class="time-slot"><strong>12:40 – 01:30 PM</strong><p>Satvik Organic Lunch and Inter-State Networking.</p></div>
-        <div class="time-slot"><strong>01:30 – 02:30 PM</strong><p>Panels III &amp; IV: Yoga &amp; Biohacking &bull; Medical Tourism in Sikkim.</p></div>
-        <div class="time-slot"><strong>02:30 – 03:30 PM</strong><p>National and International Research Paper Presentations (Gargi Research Forum).</p></div>
-        <div class="time-slot"><strong>04:00 – 05:15 PM</strong><p>Panel V: Yoga Diplomacy &amp; Conference Resolutions.</p></div>
-        <div class="time-slot"><strong>06:30 PM onwards</strong><p>International Cultural Evening, Traditional Performances &amp; Dinner.</p></div>
+        <div class="time-slot" style="background:#FFFDF7; border-color:var(--gold);">
+          <strong style="color:var(--maroon);">Afternoon Onwards</strong>
+          <p><strong>Arrival of International &amp; National Participants:</strong> Delegates reach Siliguri by afternoon. Airport (IXB) and Railway (NJP) transfers to South Sikkim venue (approx. 4 hours mountain journey), followed by hotel check-in &amp; rest.</p>
+        </div>
+        <div class="time-slot">
+          <strong>Throughout the Day</strong>
+          <p><strong>Registration &amp; Welcome Kit Collection:</strong> Verification of delegate passes and collection of official conference kits and event literature.</p>
+        </div>
+        <div class="time-slot" style="background:#FFF6F9;">
+          <strong style="color:var(--maroon);">Evening Onwards</strong>
+          <p><strong>Welcome Dinner &amp; Informal Interaction:</strong> &ldquo;A relaxed evening for participants, awardees, distinguished guests and the organising team to meet, connect and interact.&rdquo;</p>
+        </div>
+        <div class="time-slot" style="background:#FFF8E1; border-left:3px solid #FF8F00;">
+          <strong style="color:#E65100;">Important Note</strong>
+          <p style="color:#5D4037; font-weight:600; margin:0;">No formal conference or award programme will be scheduled on the arrival day.</p>
+        </div>
       </div>
 
+      <!-- DAY 2: 30 JANUARY 2027 (MAIN EVENT DAY) -->
       <div class="timeline" id="schedDay2" style="display: none;">
-        <div class="time-slot"><strong>07:00 – 08:00 AM</strong><p>Morning Sadhana &amp; Himalayan Breakfast.</p></div>
-        <div class="time-slot"><strong>08:00 AM – 12:30 PM</strong><p>Sightseeing and Cultural Excursion in South Sikkim for selected Yoginis.</p></div>
-        <div class="time-slot"><strong>12:30 – 01:30 PM</strong><p>Return to Venue and Fellowship Lunch.</p></div>
-        <div class="time-slot"><strong>01:30 – 02:30 PM</strong><p>Reception of Chief Guests and Grand Opening of Awards Ceremony.</p></div>
-        <div class="time-slot"><strong>02:30 – 03:00 PM</strong><p>Welcome Address &amp; Keynote Discourses by Union Ministers &amp; Dignitaries.</p></div>
-        <div class="time-slot"><strong>03:00 – 04:30 PM</strong><p>Presentation of 7th International Yogini Awards &amp; Special Honours.</p></div>
-        <div class="time-slot"><strong>04:30 – 05:00 PM</strong><p>Felicitation of International Delegates, Vote of Thanks &amp; Media Interaction.</p></div>
+        <div class="time-slot" style="background:rgba(140,0,61,0.04); border-color:var(--gold);">
+          <strong style="color:var(--maroon);">10:00 AM – 01:30 PM</strong>
+          <p><strong>MORNING SESSION &mdash; INTERNATIONAL CONFERENCE:</strong> Yoga, Women&rsquo;s Leadership, Holistic Wellness and Medical Tourism in India.</p>
+        </div>
+
+        <div class="time-slot">
+          <strong>10:00 – 11:00 AM</strong>
+          <p><strong>Inaugural Ceremony &amp; Sacred Lamp Lighting:</strong> Traditional lamp lighting, Vedic peace mantras, welcome address &amp; dignitaries introduction.</p>
+        </div>
+
+        <div class="time-slot">
+          <strong>11:00 – 11:40 AM</strong>
+          <p><strong>Keynote Addresses:</strong> Discourses by Eminent Guests, AYUSH Leaders &amp; Integrative Wellness Experts.</p>
+        </div>
+
+        <!-- Parallel Panel Discussions -->
+        <div class="time-slot" style="grid-template-columns: 1fr; padding: 1.15rem 1.25rem; border: 1.5px solid var(--gold); background: #FFFCF7;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.25rem;">
+            <strong style="color:var(--maroon); font-size:0.92rem;">11:40 AM – 01:30 PM &bull; PARALLEL PANEL DISCUSSIONS</strong>
+            <span style="font-size:0.75rem; background:var(--maroon); color:#fff; padding:2px 8px; border-radius:999px;">Coordinated Morning Parallel Sessions</span>
+          </div>
+          <p style="font-size:0.8rem; color:var(--text-muted); margin:0 0 0.5rem; font-style:italic;">
+            Note: All panel discussions are arranged simultaneously across two venues within the morning conference block to prevent any afternoon overlap with the fixed 3:00 PM awards ceremony.
+          </p>
+          <div class="parallel-panels-simple">
+            <!-- Conference Hall 1 -->
+            <div style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:0.85rem;">
+              <span style="background:var(--maroon); color:#fff; font-size:0.72rem; font-weight:700; padding:2px 6px; border-radius:4px;">📍 Conference Hall 1</span>
+              <h5 style="color:var(--maroon); margin:0.4rem 0 0.2rem; font-size:0.88rem;">Panel Discussion Sessions</h5>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin:0 0 0.35rem;"><strong>11:40 AM – 12:40 PM:</strong> Panel I — Yoga &amp; Preventive Health: Clinical &amp; Lifestyle Medicine</p>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin:0;"><strong>12:40 PM – 01:30 PM:</strong> Panel II — Women&rsquo;s Leadership in Vedic Heritage &amp; Spiritual Governance</p>
+            </div>
+            <!-- Conference Room 2 -->
+            <div style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:0.85rem;">
+              <span style="background:var(--forest); color:#fff; font-size:0.72rem; font-weight:700; padding:2px 6px; border-radius:4px;">📍 Conference Room 2</span>
+              <h5 style="color:var(--forest); margin:0.4rem 0 0.2rem; font-size:0.88rem;">Parallel Panel Discussion Sessions</h5>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin:0 0 0.35rem;"><strong>11:40 AM – 12:40 PM:</strong> Parallel Panel III — Yoga, Biohacking &amp; Neuroscience of Sadhana</p>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin:0;"><strong>12:40 PM – 01:30 PM:</strong> Parallel Panel IV — Medical Wellness Tourism &amp; Eco-Spirituality in Sikkim</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research Paper Presentations -->
+        <div class="time-slot" style="grid-template-columns: 1fr; padding: 1.15rem 1.25rem; background: #F9F7FB; border: 1px solid #D1C4E9;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.25rem;">
+            <strong style="color:#4A148C; font-size:0.92rem;">11:40 AM – 01:30 PM &bull; RESEARCH PAPER PRESENTATIONS (Gargi Research Forum)</strong>
+            <span style="font-size:0.74rem; color:#4A148C; font-weight:700;">Hybrid Participation Mode</span>
+          </div>
+          <div class="research-badges-simple">
+            <div style="background:#fff; border:1px solid #A5D6A7; border-radius:6px; padding:0.75rem;">
+              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.72rem; font-weight:700; padding:2px 6px; border-radius:4px; border:1px solid #A5D6A7;">🏛️ Offline Presentations</span>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin:0.3rem 0 0;">On-site presentations and research poster sessions at the conference venue.</p>
+            </div>
+            <div style="background:#fff; border:1px solid #B39DDB; border-radius:6px; padding:0.75rem;">
+              <span style="background:#EDE7F6; color:#4A148C; font-size:0.72rem; font-weight:700; padding:2px 6px; border-radius:4px; border:1px solid #B39DDB;">🌐 Online Presentations</span>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin:0.3rem 0 0;">Virtual presentations for remote and international participants joining live.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lunch Break -->
+        <div class="time-slot" style="background:#FFFBF0; border-color:var(--gold);">
+          <strong style="color:#B8860B;">01:30 – 03:00 PM</strong>
+          <p><strong>LUNCH BREAK:</strong> Satvik Organic Himalayan Lunch and Inter-State Networking.</p>
+        </div>
+
+        <!-- Afternoon Awards Ceremony -->
+        <div class="time-slot" style="background:linear-gradient(135deg, rgba(140,0,61,0.06), rgba(217,166,46,0.1)); border:2px solid var(--gold);">
+          <strong style="color:var(--maroon); font-size:0.95rem;">03:00 – 06:30 PM</strong>
+          <div>
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
+              <span style="font-size:1.1rem;">🏆</span>
+              <strong style="color:var(--maroon); font-size:1rem;">AFTERNOON SESSION — 7th INTERNATIONAL YOGINI AWARDS 2027</strong>
+            </div>
+            <p style="font-size:0.86rem; color:var(--text); margin-bottom:0.35rem;"><strong>All International Yogini Awards will be formally presented on 30 January 2027.</strong></p>
+            <p style="font-size:0.83rem; color:var(--text-muted); margin:0; line-height:1.55;">
+              &bull; <strong>03:00 – 03:30 PM:</strong> Welcome &amp; Introduction of Guests<br>
+              &bull; <strong>03:30 – 04:00 PM:</strong> Formal Awards Ceremony Opening &amp; Keynote Addresses<br>
+              &bull; <strong>04:00 – 05:30 PM:</strong> Presentation of International Yogini Awards (Shivani, Gargi, Yogini, Gonika, Maitrayi)<br>
+              &bull; <strong>05:30 – 06:15 PM:</strong> Recognition and Felicitation of Awardees<br>
+              &bull; <strong>06:15 – 06:30 PM:</strong> Formal Conclusion of the International Yogini Awards &amp; Conference
+            </p>
+          </div>
+        </div>
+
+        <div class="time-slot">
+          <strong>06:30 – 08:00 PM</strong>
+          <p><strong>FREE TIME / REST / PERSONAL INTERACTION:</strong> &ldquo;Participants may relax, network, interact with fellow delegates or explore the local area.&rdquo;</p>
+        </div>
+
+        <div class="time-slot" style="background:#FFF6F9;">
+          <strong style="color:var(--maroon);">08:00 PM onwards</strong>
+          <p><strong>INTERNATIONAL YOGINI FELLOWSHIP DINNER:</strong> &ldquo;An evening of fellowship and networking with awardees, international and national delegates, distinguished guests, speakers and the organising team.&rdquo;</p>
+        </div>
       </div>
+
+      <!-- DAY 3: 31 JANUARY 2027 -->
+      <div class="timeline" id="schedDay3" style="display: none;">
+        <div class="time-slot" style="background:#F6FBF7; border-color:var(--forest);">
+          <strong style="color:var(--forest);">Throughout the Day</strong>
+          <div>
+            <strong style="color:var(--forest);">SIGHTSEEING / EXCURSION DAY:</strong>
+            <p style="margin:0.25rem 0 0; font-size:0.86rem; color:var(--text);">All delegates will stay at the venue on 31 January. Participants have two options:</p>
+          </div>
+        </div>
+
+        <div class="time-slot">
+          <strong>Option A &bull; Departure</strong>
+          <p><strong>Departure for Respective Destinations:</strong> Early hotel check-out and transfers for participants needing to depart on 31 January.</p>
+        </div>
+
+        <div class="time-slot" style="background:#FFFDF7; border: 1.5px solid var(--gold);">
+          <strong style="color:var(--maroon);">Option B &bull; Excursion</strong>
+          <div>
+            <p><strong>OPTIONAL SIKKIM / NORTH BENGAL EXCURSION:</strong> For participants who wish to stay back and explore:</p>
+            <p style="font-size:0.84rem; color:var(--text-muted); margin:0.3rem 0 0; line-height:1.5;">
+              &bull; Tea Garden Visit (Temi Organic Tea Estate)<br>
+              &bull; Heritage / Toy Train Experience (subject to availability)<br>
+              &bull; Himalayan / Darjeeling Experience &bull; Tea Tasting<br>
+              &bull; Local Culture &amp; Handicrafts &bull; Optional Farewell Meal
+            </p>
+            <p style="font-size:0.8rem; color:var(--forest); margin:0.35rem 0 0; font-style:italic;">
+              &ldquo;The excursion will be completely optional and separately planned for interested participants.&rdquo;
+            </p>
+          </div>
+        </div>
+
+        <div class="time-slot">
+          <strong>31 January Night</strong>
+          <p><strong>Venue Stay &amp; Relaxation:</strong> All delegates stay accommodated at the venue overnight before the scheduled departure on 1 February.</p>
+        </div>
+      </div>
+
+      <!-- DAY 4: 1 FEBRUARY 2027 -->
+      <div class="timeline" id="schedDay4" style="display: none;">
+        <div class="time-slot">
+          <strong>07:00 – 09:00 AM</strong>
+          <p><strong>Hotel Check-out &amp; Breakfast:</strong> Morning packing, room check-out, and Himalayan breakfast.</p>
+        </div>
+        <div class="time-slot">
+          <strong>Morning Onwards</strong>
+          <p><strong>Venue Departure to Siliguri:</strong> All delegates depart the venue in the morning and travel back to Siliguri (approx. 4 hours mountain transit).</p>
+        </div>
+        <div class="time-slot" style="background:#FFF5F7; border-left:3px solid var(--maroon);">
+          <strong style="color:var(--maroon);">Evening (Mandatory)</strong>
+          <p><strong>Return Journey from Siliguri:</strong> All delegates must book their return train and flight tickets from Siliguri for the <strong>evening of 1 February</strong>.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -2083,64 +2255,41 @@ textarea.form-ctrl { min-height: 85px; }
         </div>
       </div>
 
-      <!-- Important Notice: Accommodation, Sightseeing & Transit Charges Policy -->
-      <div class="travel-policy-box">
-        <div class="travel-policy-header">
-          <div class="travel-policy-title-wrap">
-            <span class="travel-policy-badge">IMPORTANT POLICY ADVISORY</span>
-            <h4 class="travel-policy-title">Stay &amp; Accommodation, Sightseeing &amp; Transit Charges Notice</h4>
-          </div>
-        </div>
-        <div class="travel-policy-grid">
-          <!-- 1. Accommodation -->
-          <div class="policy-card policy-free-card">
-            <div class="policy-card-top">
-              <span class="policy-icon">🏨</span>
-              <span class="policy-badge-pill pill-free">Free (Selected Yoginis Only)</span>
-            </div>
-            <h5>Stay &amp; Accommodation</h5>
-            <div class="policy-highlight-tag free-tag">✓ Complimentary for Selected Yoginis</div>
-            <p>
-              Stay and accommodation at the venue will be <strong>free of cost exclusively for selected Yoginis (Awardees)</strong>. For all other delegates, participants, and accompanying guests, accommodation is arranged separately or on a standard self-paid basis.
-            </p>
-          </div>
-
-          <!-- 2. Sightseeing -->
-          <div class="policy-card policy-charge-card">
-            <div class="policy-card-top">
-              <span class="policy-icon">🏔️</span>
-              <span class="policy-badge-pill pill-charge">Chargeable For Everyone</span>
-            </div>
-            <h5>Sightseeing Tours (Gangtok &amp; Sikkim)</h5>
-            <div class="policy-highlight-tag charge-tag">⚠ Chargeable for All Delegates &amp; Yoginis</div>
-            <p>
-              Sightseeing excursions, including the Gangtok tour scheduled for <strong>31 January</strong> and regional sightseeing, are <strong>chargeable for everyone</strong> (including selected Yoginis and all delegates).
-            </p>
-          </div>
-
-          <!-- 3. Pickup & Drop -->
-          <div class="policy-card policy-charge-card">
-            <div class="policy-card-top">
-              <span class="policy-icon">🚐</span>
-              <span class="policy-badge-pill pill-charge">Chargeable For Everyone</span>
-            </div>
-            <h5>Siliguri &harr; Venue Pickup &amp; Drop</h5>
-            <div class="policy-highlight-tag charge-tag">⚠ Chargeable for All Delegates &amp; Yoginis</div>
-            <p>
-              Vehicle transfer and pickup &amp; drop service between Siliguri and the event venue is <strong>chargeable for everyone</strong>. All delegates are requested to coordinate their transfer schedules in advance.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Important Return Ticket Advisory Box -->
+      <!-- Important Advisory: Accommodation & Return Ticket Guidelines -->
       <div class="advisory-box">
         <div class="advisory-header">
           <div class="advisory-icon">⚠️</div>
           <div>
-            <h4 class="advisory-title">Important Return Ticket Advisory:</h4>
-            <div class="advisory-subtitle">Mandatory booking guideline for train and air return travel from Siliguri</div>
+            <h4 class="advisory-title">Important Advisory:</h4>
+            <div class="advisory-subtitle">Mandatory stay policy, transit guidelines &amp; return ticket schedule</div>
           </div>
+        </div>
+        <div class="advisory-content">
+          <!-- Highlighted Stay & Accommodation Notice directly underneath Important Advisory -->
+          <div style="background:#FFFDF7; border:1.5px solid var(--gold); border-radius:8px; padding:1rem 1.25rem; margin-bottom:0.85rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.35rem;">
+              <span style="font-size:1.02rem; font-weight:800; color:var(--maroon); display:flex; align-items:center; gap:0.4rem;">
+                <span>🏨</span> Stay &amp; Accommodation Notice
+              </span>
+              <span class="policy-badge-pill pill-free">Free (Selected Yoginis Only)</span>
+            </div>
+            <p style="margin:0 0 0.5rem; font-size:0.9rem; color:var(--text); line-height:1.55;">
+              Stay and accommodation at the venue will be <strong>free of cost exclusively for selected Yoginis (Awardees)</strong>. For all other delegates, participants, and accompanying guests, accommodation is arranged separately or on a standard self-paid basis.
+            </p>
+            <div style="font-size:0.82rem; color:var(--text-muted); line-height:1.5; border-top:1px dashed rgba(217,166,46,0.3); padding-top:0.4rem;">
+              <strong>Note on Transit &amp; Sightseeing:</strong> Vehicle transfer between Siliguri and the venue, as well as sightseeing excursions on 31 January, are organized separately and are <strong>chargeable for everyone</strong> (including selected Yoginis and all delegates).
+            </div>
+          </div>
+
+          <!-- Return Ticket Advisory Rules -->
+          <p class="advisory-text primary-rule">
+            Delegates are requested to book their return journey tickets from Siliguri for the <strong>evening of 1 February</strong>.
+          </p>
+          <p class="advisory-text caution-rule">
+            Please avoid booking morning or afternoon return tickets, as delegates will be travelling from the venue to Siliguri in the morning.
+          </p>
+        </div>
+      </div>
         </div>
         <div class="advisory-content">
           <p class="advisory-text primary-rule">

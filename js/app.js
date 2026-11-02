@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 2. Dynamic Countdown Timer (30 Jan 2027 IST)
-  const targetDate = new Date('2027-01-30T09:00:00+05:30').getTime();
+  const targetDate = new Date('2027-01-29T12:00:00+05:30').getTime();
   const cDays = document.getElementById('cDays');
   const cHours = document.getElementById('cHours');
   const cMins = document.getElementById('cMins');
@@ -109,26 +109,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Schedule Tabs (Day 1 / Day 2)
+    // 4. Schedule Tabs (Day 1 / Day 2 / Day 3 / Day 4)
   const tabDay1 = document.getElementById('tabDay1');
   const tabDay2 = document.getElementById('tabDay2');
+  const tabDay3 = document.getElementById('tabDay3');
+  const tabDay4 = document.getElementById('tabDay4');
   const schedDay1 = document.getElementById('schedDay1');
   const schedDay2 = document.getElementById('schedDay2');
+  const schedDay3 = document.getElementById('schedDay3');
+  const schedDay4 = document.getElementById('schedDay4');
 
-  if (tabDay1 && tabDay2) {
-    tabDay1.addEventListener('click', () => {
-      tabDay1.classList.add('active');
-      tabDay2.classList.remove('active');
-      schedDay1.style.display = 'flex';
-      schedDay2.style.display = 'none';
+  const tabs = [tabDay1, tabDay2, tabDay3, tabDay4];
+  const scheds = [schedDay1, schedDay2, schedDay3, schedDay4];
+
+  function switchScheduleTab(idx) {
+    tabs.forEach((t, i) => {
+      if (t) t.classList.toggle('active', i === idx);
     });
-    tabDay2.addEventListener('click', () => {
-      tabDay2.classList.add('active');
-      tabDay1.classList.remove('active');
-      schedDay1.style.display = 'none';
-      schedDay2.style.display = 'flex';
+    scheds.forEach((s, i) => {
+      if (s) s.style.display = (i === idx) ? 'flex' : 'none';
     });
   }
+
+  if (tabDay1) tabDay1.addEventListener('click', () => switchScheduleTab(0));
+  if (tabDay2) tabDay2.addEventListener('click', () => switchScheduleTab(1));
+  if (tabDay3) tabDay3.addEventListener('click', () => switchScheduleTab(2));
+  if (tabDay4) tabDay4.addEventListener('click', () => switchScheduleTab(3));
 
   // 5. Category Selection from Category Cards
   const applyBtns = document.querySelectorAll('.btn-apply');
