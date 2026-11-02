@@ -1488,3 +1488,136 @@ textarea.form-ctrl { min-height: 85px; }
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ========================================================
+   ENHANCED MOBILE RESPONSIVENESS FIXES (320px - 768px)
+   ======================================================== */
+@media (max-width: 860px) {
+  .tab-nav {
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 0.5rem !important;
+    padding: 0.4rem 0.25rem 0.85rem !important;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) rgba(0, 0, 0, 0.06);
+    margin-bottom: 1.25rem !important;
+  }
+  .tab-nav::-webkit-scrollbar {
+    height: 5px;
+  }
+  .tab-nav::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 999px;
+  }
+  .tab-nav::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 999px;
+  }
+  .tab-btn {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    scroll-snap-align: start;
+    padding: 0.55rem 0.95rem !important;
+    font-size: 0.82rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .time-slot {
+    grid-template-columns: 1fr !important;
+    gap: 0.35rem !important;
+    padding: 0.85rem 1rem !important;
+  }
+  .parallel-panels-simple {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+  .travel-support-bar {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 1.1rem 1rem !important;
+  }
+  .support-contacts {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  .support-item {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.85rem;
+  }
+  .section {
+    padding: 2.75rem 0;
+  }
+  .hero {
+    padding: 3rem 0 2rem;
+  }
+  .hero-title {
+    font-size: 1.6rem !important;
+    line-height: 1.22 !important;
+  }
+  .hero-sub {
+    font-size: 0.88rem !important;
+  }
+  .hero-badges {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.35rem !important;
+  }
+  .hero-badge {
+    width: 100% !important;
+    text-align: center !important;
+    font-size: 0.78rem !important;
+    padding: 0.4rem 0.6rem !important;
+  }
+  .countdown-box {
+    padding: 0.85rem 0.4rem !important;
+    width: 100% !important;
+  }
+  .countdown-grid {
+    gap: 0.35rem !important;
+  }
+  .count-card {
+    padding: 0.4rem 0.2rem !important;
+    min-width: 0 !important;
+  }
+  .count-num {
+    font-size: 1.25rem !important;
+  }
+  .count-label {
+    font-size: 0.58rem !important;
+  }
+  .highlights-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .dignitaries-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .sikkim-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .form-box {
+    padding: 1.25rem 0.85rem !important;
+  }
+  .form-ctrl {
+    font-size: 0.85rem !important;
+    padding: 0.65rem 0.75rem !important;
+  }
+  .btn {
+    padding: 0.75rem 1.25rem !important;
+    font-size: 0.88rem !important;
+  }
+}

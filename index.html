@@ -1506,6 +1506,140 @@ textarea.form-ctrl { min-height: 85px; }
   }
 }
 
+
+
+/* ========================================================
+   ENHANCED MOBILE RESPONSIVENESS FIXES (320px - 768px)
+   ======================================================== */
+@media (max-width: 860px) {
+  .tab-nav {
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 0.5rem !important;
+    padding: 0.4rem 0.25rem 0.85rem !important;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) rgba(0, 0, 0, 0.06);
+    margin-bottom: 1.25rem !important;
+  }
+  .tab-nav::-webkit-scrollbar {
+    height: 5px;
+  }
+  .tab-nav::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 999px;
+  }
+  .tab-nav::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 999px;
+  }
+  .tab-btn {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    scroll-snap-align: start;
+    padding: 0.55rem 0.95rem !important;
+    font-size: 0.82rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .time-slot {
+    grid-template-columns: 1fr !important;
+    gap: 0.35rem !important;
+    padding: 0.85rem 1rem !important;
+  }
+  .parallel-panels-simple {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+  .travel-support-bar {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 1.1rem 1rem !important;
+  }
+  .support-contacts {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  .support-item {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.85rem;
+  }
+  .section {
+    padding: 2.75rem 0;
+  }
+  .hero {
+    padding: 3rem 0 2rem;
+  }
+  .hero-title {
+    font-size: 1.6rem !important;
+    line-height: 1.22 !important;
+  }
+  .hero-sub {
+    font-size: 0.88rem !important;
+  }
+  .hero-badges {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.35rem !important;
+  }
+  .hero-badge {
+    width: 100% !important;
+    text-align: center !important;
+    font-size: 0.78rem !important;
+    padding: 0.4rem 0.6rem !important;
+  }
+  .countdown-box {
+    padding: 0.85rem 0.4rem !important;
+    width: 100% !important;
+  }
+  .countdown-grid {
+    gap: 0.35rem !important;
+  }
+  .count-card {
+    padding: 0.4rem 0.2rem !important;
+    min-width: 0 !important;
+  }
+  .count-num {
+    font-size: 1.25rem !important;
+  }
+  .count-label {
+    font-size: 0.58rem !important;
+  }
+  .highlights-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .dignitaries-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .sikkim-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .form-box {
+    padding: 1.25rem 0.85rem !important;
+  }
+  .form-ctrl {
+    font-size: 0.85rem !important;
+    padding: 0.65rem 0.75rem !important;
+  }
+  .btn {
+    padding: 0.75rem 1.25rem !important;
+    font-size: 0.88rem !important;
+  }
+}
+
 </style>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -1799,33 +1933,61 @@ textarea.form-ctrl { min-height: 85px; }
       <div class="sec-header">
         <span class="eyebrow">CONFERENCE HIGHLIGHTS</span>
         <h2 class="sec-title">What Makes the Event Extraordinary</h2>
-        <p class="sec-sub">Six central highlights featured in the official event poster.</p>
+        <p class="sec-sub">Six central pillars defining the 7th International Yogini Awards &amp; Conference 2027.</p>
       </div>
 
       <div class="highlights-grid">
+        <!-- 1. Yoga -->
         <div class="highlight-item">
-          <h4>🎤 1. Keynote Sessions</h4>
-          <p>Discourses by eminent spiritual masters, health experts, and public leaders.</p>
+          <div style="font-size:1.8rem; margin-bottom:0.4rem;">🧘</div>
+          <h4>1. Yoga</h4>
+          <p>International yoga practices, knowledge and transformative experiences connecting diverse spiritual traditions and authentic sadhana.</p>
         </div>
+
+        <!-- 2. Wellness -->
         <div class="highlight-item">
-          <h4>📑 2. Panel Discussions &amp; Research</h4>
-          <p>Scientific presentations on preventive health, biohacking, and yoga diplomacy.</p>
+          <div style="font-size:1.8rem; margin-bottom:0.4rem;">🌿</div>
+          <h4>2. Wellness</h4>
+          <p>Holistic health, preventive wellness, lifestyle medicine and conscious healthy living rooted in ancient Indian therapeutic wisdom.</p>
         </div>
+
+        <!-- 3. Art -->
         <div class="highlight-item">
-          <h4>🏆 3. International Yogini Awards</h4>
-          <p>Prestigious gala honoring lifetime achievement, scholarship, and practitioners.</p>
+          <div style="font-size:1.8rem; margin-bottom:0.4rem;">🎨</div>
+          <h4>3. Art</h4>
+          <p>Cultural heritage, traditional art, sacred music, dance, and creative expressions celebrating Himalayan and Indian aesthetics.</p>
         </div>
+
+        <!-- 4. Tourism -->
         <div class="highlight-item">
-          <h4>🌿 4. Yoga, Wellness &amp; Tourism</h4>
-          <p>Promoting Sikkim as an eco-conscious destination for medical and holistic tourism.</p>
+          <div style="font-size:1.8rem; margin-bottom:0.4rem;">🏔️</div>
+          <h4>4. Tourism</h4>
+          <p>Discovering the beauty, sacred culture, and sustainable tourism opportunities of Sikkim nestled amidst the serene Himalayas.</p>
         </div>
-        <div class="highlight-item">
-          <h4>🌐 5. Global Networking</h4>
-          <p>Delegates from Singapore, USA, South Korea, Vietnam, UAE, Nepal, and all Indian States.</p>
+
+        <!-- 5. Global Networking -->
+        <div class="highlight-item" style="border: 1.5px solid var(--gold); background: #FFFDF8;">
+          <div style="font-size:1.8rem; margin-bottom:0.4rem;">🌐</div>
+          <h4>5. Global Networking</h4>
+          <p style="margin-bottom:0.6rem; font-size:0.85rem; color:var(--text);">Uniting distinguished delegates, international yoga practitioners and wellness visionaries representing countries including:</p>
+          <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+            <span style="background:var(--white); border:1px solid var(--border); padding:3px 8px; border-radius:6px; font-size:0.78rem; font-weight:700; color:var(--maroon);">🇦🇺 Australia</span>
+            <span style="background:var(--white); border:1px solid var(--border); padding:3px 8px; border-radius:6px; font-size:0.78rem; font-weight:700; color:var(--maroon);">🇯🇵 Japan</span>
+            <span style="background:var(--white); border:1px solid var(--border); padding:3px 8px; border-radius:6px; font-size:0.78rem; font-weight:700; color:var(--maroon);">🇲🇾 Malaysia</span>
+            <span style="background:var(--white); border:1px solid var(--border); padding:3px 8px; border-radius:6px; font-size:0.78rem; font-weight:700; color:var(--maroon);">🇳🇿 New Zealand</span>
+            <span style="background:var(--white); border:1px solid var(--border); padding:3px 8px; border-radius:6px; font-size:0.78rem; font-weight:700; color:var(--maroon);">🇮🇩 Indonesia</span>
+            <span style="background:var(--white); border:1px solid var(--border); padding:3px 8px; border-radius:6px; font-size:0.78rem; font-weight:700; color:var(--maroon);">🇮🇹 Italy</span>
+          </div>
         </div>
-        <div class="highlight-item">
-          <h4>🏔️ 6. Local Sightseeing &amp; Spiritual Tour</h4>
-          <p>Excursion to Ravangla Monastery, Temi Tea Gardens, Tendong Hill, and Namchi Char Dham.</p>
+
+        <!-- 6. Namchi Char Dham & Gangtok -->
+        <div class="highlight-item" style="border: 1.5px solid rgba(6,63,50,0.3); background: #F8FBF9;">
+          <div style="display:flex; gap:0.5rem; margin-bottom:0.55rem;">
+            <img src="assets/images/dest-namchi.jpg" alt="Namchi Char Dham" style="width:48%; height:72px; object-fit:cover; border-radius:6px;">
+            <img src="assets/images/dest-gangtok.jpg" alt="Gangtok" style="width:48%; height:72px; object-fit:cover; border-radius:6px;">
+          </div>
+          <h4>6. Namchi Char Dham &amp; Gangtok</h4>
+          <p>Special spiritual excursion to the revered <strong>Namchi Char Dham</strong> (featuring the sacred 87-ft Lord Shiva statue) and the scenic capital city of <strong>Gangtok</strong>, exploring Himalayan vistas and sacred shrines.</p>
         </div>
       </div>
     </div>
@@ -1885,100 +2047,130 @@ textarea.form-ctrl { min-height: 85px; }
 
       <!-- DAY 2: 30 JANUARY 2027 (MAIN EVENT DAY) -->
       <div class="timeline" id="schedDay2" style="display: none;">
-        <div class="time-slot" style="background:rgba(140,0,61,0.04); border-color:var(--gold);">
-          <strong style="color:var(--maroon);">10:00 AM – 01:30 PM</strong>
-          <p><strong>MORNING SESSION &mdash; INTERNATIONAL CONFERENCE:</strong> Yoga, Women&rsquo;s Leadership, Holistic Wellness and Medical Tourism in India.</p>
-        </div>
-
-        <div class="time-slot">
-          <strong>10:00 – 11:00 AM</strong>
-          <p><strong>Inaugural Ceremony &amp; Sacred Lamp Lighting:</strong> Traditional lamp lighting, Vedic peace mantras, welcome address &amp; dignitaries introduction.</p>
-        </div>
-
-        <div class="time-slot">
-          <strong>11:00 – 11:40 AM</strong>
-          <p><strong>Keynote Addresses:</strong> Discourses by Eminent Guests, AYUSH Leaders &amp; Integrative Wellness Experts.</p>
-        </div>
-
-        <!-- Parallel Panel Discussions -->
-        <div class="time-slot" style="grid-template-columns: 1fr; padding: 1.15rem 1.25rem; border: 1.5px solid var(--gold); background: #FFFCF7;">
-          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.25rem;">
-            <strong style="color:var(--maroon); font-size:0.92rem;">11:40 AM – 01:30 PM &bull; PARALLEL PANEL DISCUSSIONS</strong>
-            <span style="font-size:0.75rem; background:var(--maroon); color:#fff; padding:2px 8px; border-radius:999px;">Coordinated Morning Parallel Sessions</span>
+        
+        <!-- Opening Ceremony: Vande Mataram -->
+        <div class="time-slot" style="background:#FFFDF7; border-left:3px solid var(--gold);">
+          <strong style="color:var(--maroon);">Opening Ceremony</strong>
+          <div>
+            <p style="font-weight:700; color:var(--maroon); margin-bottom:0.25rem;">🇮🇳 Vande Mataram &bull; Inaugural Prayers</p>
+            <p style="font-size:0.86rem; color:var(--text-muted); margin:0;">Commencement of the 7th International Yogini Awards &amp; Conference with the sacred rendition of Vande Mataram and Vedic peace mantras.</p>
           </div>
-          <p style="font-size:0.8rem; color:var(--text-muted); margin:0 0 0.5rem; font-style:italic;">
-            Note: All panel discussions are arranged simultaneously across two venues within the morning conference block to prevent any afternoon overlap with the fixed 3:00 PM awards ceremony.
-          </p>
+        </div>
+
+        <!-- 9:30 AM – 10:00 AM: Registration & Formalities -->
+        <div class="time-slot">
+          <strong>09:30 – 10:00 AM</strong>
+          <div>
+            <p style="font-weight:700; color:var(--maroon); margin-bottom:0.25rem;">Registration &amp; Formalities</p>
+            <p style="font-size:0.86rem; color:var(--text-muted); margin:0;">Morning delegate badge verification, entry formalities, and welcome desk reception.</p>
+          </div>
+        </div>
+
+        <!-- 10:00 AM – 1:30 PM: INTERNATIONAL CONFERENCE -->
+        <div class="time-slot" style="grid-template-columns: 1fr; padding: 1.25rem; border: 1.5px solid var(--gold); background: #FFFCF7;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem; border-bottom:1px solid rgba(217,166,46,0.3); padding-bottom:0.5rem;">
+            <div>
+              <span style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; color:var(--gold); text-transform:uppercase;">10:00 AM – 01:30 PM</span>
+              <h4 style="margin:0.2rem 0 0; color:var(--maroon); font-size:1.15rem; font-weight:800;">INTERNATIONAL CONFERENCE</h4>
+            </div>
+            <span style="font-size:0.75rem; background:var(--maroon); color:#fff; padding:3px 10px; border-radius:999px; font-weight:600;">Two Parallel Conference Rooms</span>
+          </div>
+          
           <div class="parallel-panels-simple">
             <!-- Conference Hall 1 -->
-            <div style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:0.85rem;">
-              <span style="background:var(--maroon); color:#fff; font-size:0.72rem; font-weight:700; padding:2px 6px; border-radius:4px;">📍 Conference Hall 1</span>
-              <h5 style="color:var(--maroon); margin:0.4rem 0 0.2rem; font-size:0.88rem;">Panel Discussion Sessions</h5>
-              <p style="font-size:0.82rem; color:var(--text-muted); margin:0 0 0.35rem;"><strong>11:40 AM – 12:40 PM:</strong> Panel I — Yoga &amp; Preventive Health: Clinical &amp; Lifestyle Medicine</p>
-              <p style="font-size:0.82rem; color:var(--text-muted); margin:0;"><strong>12:40 PM – 01:30 PM:</strong> Panel II — Women&rsquo;s Leadership in Vedic Heritage &amp; Spiritual Governance</p>
+            <div style="background:#fff; border:1.5px solid rgba(140,0,61,0.25); border-radius:8px; padding:1.1rem; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+              <div style="display:inline-block; background:var(--maroon); color:#fff; font-size:0.75rem; font-weight:700; padding:3px 8px; border-radius:4px; margin-bottom:0.6rem;">📍 Conference Hall 1</div>
+              <h5 style="color:var(--maroon); font-size:0.98rem; font-weight:700; margin-bottom:0.5rem;">Conference Hall 1 Sessions</h5>
+              <ul style="list-style:none; padding:0; margin:0; font-size:0.86rem; color:var(--text); line-height:1.75;">
+                <li style="display:flex; align-items:center; gap:0.45rem;">✨ <strong>Yoga</strong> &mdash; International Yoga Practices &amp; Philosophy</li>
+                <li style="display:flex; align-items:center; gap:0.45rem;">🌿 <strong>Holistic Wellness</strong> &mdash; Integrative Health &amp; Preventive Living</li>
+                <li style="display:flex; align-items:center; gap:0.45rem;">👑 <strong>Women&rsquo;s Leadership</strong> &mdash; Vedic Wisdom &amp; Cultural Empowerment</li>
+              </ul>
             </div>
+
             <!-- Conference Room 2 -->
-            <div style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:0.85rem;">
-              <span style="background:var(--forest); color:#fff; font-size:0.72rem; font-weight:700; padding:2px 6px; border-radius:4px;">📍 Conference Room 2</span>
-              <h5 style="color:var(--forest); margin:0.4rem 0 0.2rem; font-size:0.88rem;">Parallel Panel Discussion Sessions</h5>
-              <p style="font-size:0.82rem; color:var(--text-muted); margin:0 0 0.35rem;"><strong>11:40 AM – 12:40 PM:</strong> Parallel Panel III — Yoga, Biohacking &amp; Neuroscience of Sadhana</p>
-              <p style="font-size:0.82rem; color:var(--text-muted); margin:0;"><strong>12:40 PM – 01:30 PM:</strong> Parallel Panel IV — Medical Wellness Tourism &amp; Eco-Spirituality in Sikkim</p>
+            <div style="background:#fff; border:1.5px solid rgba(6,63,50,0.25); border-radius:8px; padding:1.1rem; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+              <div style="display:inline-block; background:var(--forest); color:#fff; font-size:0.75rem; font-weight:700; padding:3px 8px; border-radius:4px; margin-bottom:0.6rem;">📍 Conference Room 2</div>
+              <h5 style="color:var(--forest); font-size:0.98rem; font-weight:700; margin-bottom:0.5rem;">Conference Room 2 Sessions</h5>
+              <ul style="list-style:none; padding:0; margin:0; font-size:0.86rem; color:var(--text); line-height:1.75;">
+                <li style="display:flex; align-items:center; gap:0.45rem;">🌸 <strong>Wellness</strong> &mdash; Mind-Body Harmony &amp; Healthy Lifestyle</li>
+                <li style="display:flex; align-items:center; gap:0.45rem;">🏔️ <strong>Tourism</strong> &mdash; Eco-Spirituality &amp; Sikkim Tourism Horizons</li>
+                <li style="display:flex; align-items:center; gap:0.45rem;">🎨 <strong>Art</strong> &mdash; Traditional Expressions &amp; Cultural Heritage</li>
+                <li style="display:flex; align-items:center; gap:0.45rem;">🌱 <strong>Ecology</strong> &mdash; Nature Conservation &amp; Organic Living</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <!-- Research Paper Presentations -->
-        <div class="time-slot" style="grid-template-columns: 1fr; padding: 1.15rem 1.25rem; background: #F9F7FB; border: 1px solid #D1C4E9;">
-          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.25rem;">
-            <strong style="color:#4A148C; font-size:0.92rem;">11:40 AM – 01:30 PM &bull; RESEARCH PAPER PRESENTATIONS (Gargi Research Forum)</strong>
-            <span style="font-size:0.74rem; color:#4A148C; font-weight:700;">Hybrid Participation Mode</span>
-          </div>
-          <div class="research-badges-simple">
-            <div style="background:#fff; border:1px solid #A5D6A7; border-radius:6px; padding:0.75rem;">
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.72rem; font-weight:700; padding:2px 6px; border-radius:4px; border:1px solid #A5D6A7;">🏛️ Offline Presentations</span>
-              <p style="font-size:0.82rem; color:var(--text-muted); margin:0.3rem 0 0;">On-site presentations and research poster sessions at the conference venue.</p>
-            </div>
-            <div style="background:#fff; border:1px solid #B39DDB; border-radius:6px; padding:0.75rem;">
-              <span style="background:#EDE7F6; color:#4A148C; font-size:0.72rem; font-weight:700; padding:2px 6px; border-radius:4px; border:1px solid #B39DDB;">🌐 Online Presentations</span>
-              <p style="font-size:0.82rem; color:var(--text-muted); margin:0.3rem 0 0;">Virtual presentations for remote and international participants joining live.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Lunch Break -->
+        <!-- 1:30 PM – 2:00 PM: Lunch Break -->
         <div class="time-slot" style="background:#FFFBF0; border-color:var(--gold);">
-          <strong style="color:#B8860B;">01:30 – 03:00 PM</strong>
-          <p><strong>LUNCH BREAK:</strong> Satvik Organic Himalayan Lunch and Inter-State Networking.</p>
-        </div>
-
-        <!-- Afternoon Awards Ceremony -->
-        <div class="time-slot" style="background:linear-gradient(135deg, rgba(140,0,61,0.06), rgba(217,166,46,0.1)); border:2px solid var(--gold);">
-          <strong style="color:var(--maroon); font-size:0.95rem;">03:00 – 06:30 PM</strong>
+          <strong style="color:#B8860B;">01:30 – 02:00 PM</strong>
           <div>
-            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
-              <span style="font-size:1.1rem;">🏆</span>
-              <strong style="color:var(--maroon); font-size:1rem;">AFTERNOON SESSION — 7th INTERNATIONAL YOGINI AWARDS 2027</strong>
-            </div>
-            <p style="font-size:0.86rem; color:var(--text); margin-bottom:0.35rem;"><strong>All International Yogini Awards will be formally presented on 30 January 2027.</strong></p>
-            <p style="font-size:0.83rem; color:var(--text-muted); margin:0; line-height:1.55;">
-              &bull; <strong>03:00 – 03:30 PM:</strong> Welcome &amp; Introduction of Guests<br>
-              &bull; <strong>03:30 – 04:00 PM:</strong> Formal Awards Ceremony Opening &amp; Keynote Addresses<br>
-              &bull; <strong>04:00 – 05:30 PM:</strong> Presentation of International Yogini Awards (Shivani, Gargi, Yogini, Gonika, Maitrayi)<br>
-              &bull; <strong>05:30 – 06:15 PM:</strong> Recognition and Felicitation of Awardees<br>
-              &bull; <strong>06:15 – 06:30 PM:</strong> Formal Conclusion of the International Yogini Awards &amp; Conference
-            </p>
+            <p style="font-weight:700; color:var(--maroon); margin-bottom:0.25rem;">🍽️ Lunch Break</p>
+            <p style="font-size:0.86rem; color:var(--text-muted); margin:0;">Satvik Organic Himalayan Lunch break for all guests, delegates, and participants.</p>
           </div>
         </div>
 
-        <div class="time-slot">
-          <strong>06:30 – 08:00 PM</strong>
-          <p><strong>FREE TIME / REST / PERSONAL INTERACTION:</strong> &ldquo;Participants may relax, network, interact with fellow delegates or explore the local area.&rdquo;</p>
+        <!-- AFTERNOON SESSION: 7th INTERNATIONAL YOGINI AWARDS 2027 (3:00 PM – 6:00 PM) -->
+        <div class="time-slot" style="grid-template-columns: 1fr; background:linear-gradient(135deg, rgba(140,0,61,0.07), rgba(217,166,46,0.12)); border:2px solid var(--gold); border-radius:10px; padding:1.4rem 1.35rem; box-shadow:0 4px 18px rgba(140,0,61,0.06);">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.6rem; margin-bottom:1rem; border-bottom:1.5px solid rgba(217,166,46,0.35); padding-bottom:0.6rem;">
+            <div style="display:flex; align-items:center; gap:0.6rem;">
+              <span style="font-size:1.4rem;">🏆</span>
+              <div>
+                <span style="font-size:0.75rem; font-weight:800; color:var(--gold); letter-spacing:0.12em; text-transform:uppercase;">AFTERNOON SESSION &bull; 03:00 PM – 06:00 PM</span>
+                <h4 style="margin:0.15rem 0 0; color:var(--maroon); font-size:1.22rem; font-weight:800; letter-spacing:-0.01em;">7th INTERNATIONAL YOGINI AWARDS 2027</h4>
+              </div>
+            </div>
+            <span style="font-size:0.75rem; background:linear-gradient(135deg, var(--maroon), var(--burgundy)); color:#fff; padding:4px 12px; border-radius:999px; font-weight:700;">Grand Gala Ceremony</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:0.65rem;">
+            <div style="background:#fff; border-left:3px solid var(--gold); padding:0.65rem 0.9rem; border-radius:0 6px 6px 0;">
+              <strong style="color:var(--maroon); font-size:0.88rem;">03:00 – 04:00 PM</strong>
+              <p style="font-size:0.86rem; color:var(--text); margin:0.15rem 0 0;"><strong>Welcome Ceremony &amp; Introduction of Dignitaries:</strong> Formal reception, ceremonial welcoming, and presentation of distinguished guests and patrons.</p>
+            </div>
+            <div style="background:#fff; border-left:3px solid var(--maroon); padding:0.65rem 0.9rem; border-radius:0 6px 6px 0;">
+              <strong style="color:var(--maroon); font-size:0.88rem;">04:00 – 05:00 PM</strong>
+              <p style="font-size:0.86rem; color:var(--text); margin:0.15rem 0 0;"><strong>Recognition &amp; Felicitation of Yoginis:</strong> Conferment of the prestigious 7th International Yogini Awards (Shivani, Gargi, Yogini, Gonika &amp; Maitrayi Awards).</p>
+            </div>
+            <div style="background:#fff; border-left:3px solid var(--forest); padding:0.65rem 0.9rem; border-radius:0 6px 6px 0;">
+              <strong style="color:var(--maroon); font-size:0.88rem;">05:00 – 05:30 PM</strong>
+              <p style="font-size:0.86rem; color:var(--text); margin:0.15rem 0 0;"><strong>Chief Guest Keynote Address:</strong> Inspiring address by the Chief Guest on women&rsquo;s leadership, Indian spiritual culture, and global yoga heritage.</p>
+            </div>
+            <div style="background:#fff; border-left:3px solid var(--gold); padding:0.65rem 0.9rem; border-radius:0 6px 6px 0;">
+              <strong style="color:var(--maroon); font-size:0.88rem;">05:30 – 06:00 PM</strong>
+              <p style="font-size:0.86rem; color:var(--text); margin:0.15rem 0 0;"><strong>Book Launching, Vote of Thanks &amp; National Anthem (Rashtragaan):</strong> Special ceremonial book release, formal vote of thanks to all organizers and delegates, concluding with the National Anthem.</p>
+            </div>
+          </div>
         </div>
 
+        <!-- 6:00 PM – 6:30 PM: Rest & Personal Time -->
+        <div class="time-slot">
+          <strong>06:00 – 06:30 PM</strong>
+          <div>
+            <p style="font-weight:700; color:var(--maroon); margin-bottom:0.25rem;">☕ Rest &amp; Personal Time</p>
+            <p style="font-size:0.86rem; color:var(--text-muted); margin:0;">Participants may relax, freshen up, and interact informally with fellow delegates.</p>
+          </div>
+        </div>
+
+        <!-- 6:30 PM – 7:30 PM: Cultural Programme -->
+        <div class="time-slot" style="background:#FFF7FA; border-left:3px solid var(--burgundy);">
+          <strong style="color:var(--burgundy);">06:30 – 07:30 PM</strong>
+          <div>
+            <p style="font-weight:700; color:var(--burgundy); margin-bottom:0.25rem;">🎭 Cultural Programme</p>
+            <p style="font-size:0.86rem; color:var(--text-muted); margin:0;">Vibrant traditional cultural performances showcasing Himalayan folk music, dance, and spiritual artistry.</p>
+          </div>
+        </div>
+
+        <!-- 8:00 PM onwards: Dinner -->
         <div class="time-slot" style="background:#FFF6F9;">
           <strong style="color:var(--maroon);">08:00 PM onwards</strong>
-          <p><strong>INTERNATIONAL YOGINI FELLOWSHIP DINNER:</strong> &ldquo;An evening of fellowship and networking with awardees, international and national delegates, distinguished guests, speakers and the organising team.&rdquo;</p>
+          <div>
+            <p style="font-weight:700; color:var(--maroon); margin-bottom:0.25rem;">🍲 Dinner</p>
+            <p style="font-size:0.86rem; color:var(--text-muted); margin:0;">Fellowship dinner and joyful dining interaction with awardees, distinguished guests, speakers, and the organizing team.</p>
+          </div>
         </div>
+
       </div>
 
       <!-- DAY 3: 31 JANUARY 2027 -->
@@ -1996,20 +2188,54 @@ textarea.form-ctrl { min-height: 85px; }
           <p><strong>Departure for Respective Destinations:</strong> Early hotel check-out and transfers for participants needing to depart on 31 January.</p>
         </div>
 
-        <div class="time-slot" style="background:#FFFDF7; border: 1.5px solid var(--gold);">
-          <strong style="color:var(--maroon);">Option B &bull; Excursion</strong>
-          <div>
-            <p><strong>OPTIONAL SIKKIM / NORTH BENGAL EXCURSION:</strong> For participants who wish to stay back and explore:</p>
-            <p style="font-size:0.84rem; color:var(--text-muted); margin:0.3rem 0 0; line-height:1.5;">
-              &bull; Tea Garden Visit (Temi Organic Tea Estate)<br>
-              &bull; Heritage / Toy Train Experience (subject to availability)<br>
-              &bull; Himalayan / Darjeeling Experience &bull; Tea Tasting<br>
-              &bull; Local Culture &amp; Handicrafts &bull; Optional Farewell Meal
-            </p>
-            <p style="font-size:0.8rem; color:var(--forest); margin:0.35rem 0 0; font-style:italic;">
-              &ldquo;The excursion will be completely optional and separately planned for interested participants.&rdquo;
-            </p>
+        <div class="time-slot" style="grid-template-columns: 1fr; background:#FFFDF7; border: 1.5px solid var(--gold); border-radius:10px; padding:1.25rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.6rem; border-bottom:1px solid rgba(217,166,46,0.3); padding-bottom:0.4rem;">
+            <strong style="color:var(--maroon); font-size:0.98rem;">OPTION B – OPTIONAL SIKKIM / GANGTOK TOUR</strong>
+            <span style="font-size:0.75rem; background:var(--forest); color:#fff; padding:2px 8px; border-radius:999px;">Optional Excursion</span>
           </div>
+
+          <p style="font-size:0.88rem; color:var(--text); line-height:1.6; margin-bottom:0.85rem;">
+            Participants who wish to stay back can explore the beautiful monasteries, Himalayan landscapes, spiritual destinations and local culture of Sikkim and Gangtok. This excursion will be completely optional and separately planned.
+          </p>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:0.65rem; margin-bottom:0.85rem;">
+            <div style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:0.65rem;">
+              <strong style="color:var(--maroon); font-size:0.84rem; display:block; margin-bottom:0.2rem;">🛕 1. Rumtek Monastery</strong>
+              <p style="font-size:0.8rem; color:var(--text-muted); margin:0;">A famous Buddhist monastery known for its spiritual significance and architecture.</p>
+            </div>
+            <div style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:0.65rem;">
+              <strong style="color:var(--maroon); font-size:0.84rem; display:block; margin-bottom:0.2rem;">🌸 2. Enchey Monastery</strong>
+              <p style="font-size:0.8rem; color:var(--text-muted); margin:0;">A beautiful and peaceful monastery in Gangtok.</p>
+            </div>
+            <div style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:0.65rem;">
+              <strong style="color:var(--maroon); font-size:0.84rem; display:block; margin-bottom:0.2rem;">🛍️ 3. MG Marg</strong>
+              <p style="font-size:0.8rem; color:var(--text-muted); margin:0;">Famous shopping street, cafes and local culture.</p>
+            </div>
+            <div style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:0.65rem;">
+              <strong style="color:var(--maroon); font-size:0.84rem; display:block; margin-bottom:0.2rem;">🏔️ 4. Tashi View Point</strong>
+              <p style="font-size:0.8rem; color:var(--text-muted); margin:0;">Beautiful Himalayan mountain views.</p>
+            </div>
+            <div style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:0.65rem;">
+              <strong style="color:var(--maroon); font-size:0.84rem; display:block; margin-bottom:0.2rem;">🌊 5. Banjhakri Falls</strong>
+              <p style="font-size:0.8rem; color:var(--text-muted); margin:0;">A scenic waterfall and nature destination.</p>
+            </div>
+            <div style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:0.65rem;">
+              <strong style="color:var(--maroon); font-size:0.84rem; display:block; margin-bottom:0.2rem;">🌄 6. Ganesh Tok</strong>
+              <p style="font-size:0.8rem; color:var(--text-muted); margin:0;">A popular viewpoint overlooking Gangtok.</p>
+            </div>
+            <div style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:0.65rem;">
+              <strong style="color:var(--maroon); font-size:0.84rem; display:block; margin-bottom:0.2rem;">🚩 7. Hanuman Tok</strong>
+              <p style="font-size:0.8rem; color:var(--text-muted); margin:0;">A peaceful temple with beautiful mountain views.</p>
+            </div>
+            <div style="background:#fff; border:1px solid var(--border); border-radius:6px; padding:0.65rem;">
+              <strong style="color:var(--maroon); font-size:0.84rem; display:block; margin-bottom:0.2rem;">☸️ 8. Do Drul Chorten</strong>
+              <p style="font-size:0.8rem; color:var(--text-muted); margin:0;">An important Buddhist stupa in Gangtok.</p>
+            </div>
+          </div>
+
+          <p style="font-size:0.8rem; color:var(--forest); margin:0; font-style:italic;">
+            &ldquo;The excursion will be completely optional and separately planned for interested participants.&rdquo;
+          </p>
         </div>
 
         <div class="time-slot">
@@ -2061,9 +2287,9 @@ textarea.form-ctrl { min-height: 85px; }
         </div>
         <div class="dignitary-card">
           <div class="crest">JK</div>
-          <h4>Dr. Jyoti Keswani</h4>
-          <div class="desig">Chairperson &amp; Senior Health Consultant</div>
-          <div class="note">Integrative Wellness Luminary (Invited Dignitary)</div>
+          <h4>Dr. Jyoti Kehwani</h4>
+          <div class="desig">Director, CCRYN</div>
+          <div class="note">Central Council for Research in Yoga &amp; Naturopathy</div>
         </div>
         <div class="dignitary-card">
           <div class="crest">BB</div>
@@ -2072,9 +2298,16 @@ textarea.form-ctrl { min-height: 85px; }
           <div class="note">Former Indian Football Captain (Invited Dignitary)</div>
         </div>
         <div class="dignitary-card">
+          <div class="crest">LA</div>
+          <h4>Shri Laal Singh Arya</h4>
+          <div class="desig">National Vice President, BJP &amp; In-charge of West Bengal</div>
+          <div class="note">Distinguished Political Leader &amp; Patron (Invited Dignitary)</div>
+        </div>
+        <div class="dignitary-card">
           <div class="crest">RV</div>
           <h4>Raj Vasu</h4>
           <div class="desig">Social Activist</div>
+          <div class="note">National Social Reformer (Invited Dignitary)</div>
         </div>
         <div class="dignitary-card">
           <div class="crest">IN</div>
@@ -2104,24 +2337,6 @@ textarea.form-ctrl { min-height: 85px; }
         </div>
         <div class="gallery-img-wrap" onclick="openLightbox('assets/gallery/gallery-02.jpg')">
           <img src="assets/gallery/gallery-02.jpg" alt="Conferment of awards" loading="lazy">
-        </div>
-        <div class="gallery-img-wrap" onclick="openLightbox('assets/gallery/gallery-03.jpg')">
-          <img src="assets/gallery/gallery-03.jpg" alt="Felicitation ceremony" loading="lazy">
-        </div>
-        <div class="gallery-img-wrap" onclick="openLightbox('assets/gallery/gallery-04.jpg')">
-          <img src="assets/gallery/gallery-04.jpg" alt="Lamp lighting ceremony" loading="lazy">
-        </div>
-        <div class="gallery-img-wrap" onclick="openLightbox('assets/gallery/gallery-05.jpg')">
-          <img src="assets/gallery/gallery-05.jpg" alt="Panel discussion" loading="lazy">
-        </div>
-        <div class="gallery-img-wrap" onclick="openLightbox('assets/gallery/gallery-06.jpg')">
-          <img src="assets/gallery/gallery-06.jpg" alt="Cultural performance" loading="lazy">
-        </div>
-        <div class="gallery-img-wrap" onclick="openLightbox('assets/gallery/gallery-07.jpg')">
-          <img src="assets/gallery/gallery-07.jpg" alt="Awardees felicitation" loading="lazy">
-        </div>
-        <div class="gallery-img-wrap" onclick="openLightbox('assets/gallery/gallery-08.jpg')">
-          <img src="assets/gallery/gallery-08.jpg" alt="Keynote address" loading="lazy">
         </div>
       </div>
     </div>
@@ -2303,19 +2518,10 @@ textarea.form-ctrl { min-height: 85px; }
         <div class="support-contacts">
           <div class="support-item">
             <span class="support-phone-icon">📞</span>
-            <a href="tel:9425126644" class="support-link">9425126644</a>
+            <a href="tel:+917999339467" class="support-link">7999339467</a>
             <div class="support-btns">
-              <a href="tel:9425126644" class="pill-btn pill-call">Call</a>
-              <a href="https://wa.me/919425126644" target="_blank" rel="noopener noreferrer" class="pill-btn pill-wa">WhatsApp</a>
-            </div>
-          </div>
-          <div class="support-divider"></div>
-          <div class="support-item">
-            <span class="support-phone-icon">📞</span>
-            <a href="tel:+919832158885" class="support-link">+91 98321 58885</a>
-            <div class="support-btns">
-              <a href="tel:+919832158885" class="pill-btn pill-call">Call</a>
-              <a href="https://wa.me/919832158885" target="_blank" rel="noopener noreferrer" class="pill-btn pill-wa">WhatsApp</a>
+              <a href="tel:+917999339467" class="pill-btn pill-call">Call</a>
+              <a href="https://wa.me/917999339467" target="_blank" rel="noopener noreferrer" class="pill-btn pill-wa">WhatsApp</a>
             </div>
           </div>
         </div>
@@ -2764,19 +2970,10 @@ textarea.form-ctrl { min-height: 85px; }
             <li>📍 Bermiok Namphing, South Sikkim</li>
             <li class="contact-item">
               <div class="contact-line">
-                <span class="contact-num">📞 <a href="tel:9425126644">9425126644</a></span>
+                <span class="contact-num">📞 <a href="tel:+917999339467">7999339467</a></span>
                 <span class="contact-action-pills">
-                  <a href="tel:9425126644" class="contact-pill call" title="Call 9425126644">Call</a>
-                  <a href="https://wa.me/919425126644" target="_blank" rel="noopener noreferrer" class="contact-pill wa" title="WhatsApp 9425126644">WhatsApp</a>
-                </span>
-              </div>
-            </li>
-            <li class="contact-item">
-              <div class="contact-line">
-                <span class="contact-num">📞 <a href="tel:+919832158885">+91 98321 58885</a></span>
-                <span class="contact-action-pills">
-                  <a href="tel:+919832158885" class="contact-pill call" title="Call +91 98321 58885">Call</a>
-                  <a href="https://wa.me/919832158885" target="_blank" rel="noopener noreferrer" class="contact-pill wa" title="WhatsApp +91 98321 58885">WhatsApp</a>
+                  <a href="tel:+917999339467" class="contact-pill call" title="Call 7999339467">Call</a>
+                  <a href="https://wa.me/917999339467" target="_blank" rel="noopener noreferrer" class="contact-pill wa" title="WhatsApp 7999339467">WhatsApp</a>
                 </span>
               </div>
             </li>
@@ -2785,8 +2982,6 @@ textarea.form-ctrl { min-height: 85px; }
           </ul>
         </div>
       </div>
-
-
 
       <div class="footer-bottom">
         &copy; 2027 Bharatiya Yogini Sangh &amp; ACT. All rights reserved. &bull; शान्तिमूलं जगत्सर्वम्
